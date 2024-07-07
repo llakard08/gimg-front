@@ -1,0 +1,351 @@
+.sectionContainer {
+    width: 80%;
+    height: 100%;
+}
+
+.primaryButton {
+    font-family: var(--body-font);
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 1000px;
+    border: none;
+    color: var(--text-white);
+    background-color: var(--primary-accent);
+    padding: var(--spacing-sm) var(--spacing-md);
+    transition: all 0.15s ease;
+    justify-content: center;
+    align-items: center;
+}
+
+.primaryButton:hover {
+    background-color: var(--primary-button-hover);
+    cursor: pointer;
+}
+
+
+.navbarButton {
+    background-color: var(--button-blue);
+    color: var(--text-white);
+}
+
+.navbarButton:hover {
+    background-color: rgba(250, 250, 250, 0.5);
+}
+
+.withIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Appartments {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 94vh;
+    margin-top: 3%;
+    padding: 0 5% 0 5%;
+    pointer-events: auto;
+}
+
+.appartmentsSection {
+    background-color: var(--bg-blue);
+    width: 100%;
+    height: 90%;
+    padding: 50px 50px 10px 50px;
+    box-shadow: 0px 26px 80px 1000px rgba(0, 0, 0, 0.45);
+    border-radius: 30px 30px 0 0;
+    overflow: hidden;
+}
+
+.appartmentsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blueH3 {
+    color: #1386DA;
+}
+
+.bold {
+    font-size: 40px;
+}
+
+.light {
+    color: #375c77;
+}
+
+.appartmentsContainer {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 83%;
+    /* justify-content: center; */
+    overflow-x: hidden;
+    overflow-y: scroll;
+    gap: 30px;
+}
+
+.appartmentsContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.gridItem {
+    border: 1px solid #6A8090;
+    border-radius: 20px;
+    padding: 30px;
+    width: 334px;
+
+    height: 356px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.gridItem:hover {
+    cursor: pointer;
+}
+
+.gridItem img {
+    height: 250px;
+
+}
+
+.itemComponents {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    width: 95%;
+}
+
+@font-face {
+    font-family: 'GIMG Georgian';
+    src: url('../../assets/fonts/bpg_mrgvlovani_caps_2010.ttf');
+}
+
+.gimgGeorgianText {
+    font-family: 'GIMG Georgian';
+    white-space: nowrap;
+}
+
+.selectionSection {
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.filter {
+    width: 30%;
+    height: 80%;
+}
+
+.filterBtn {
+    display: none;
+}
+
+/*
+Laptop XL
+*/
+@media only screen and (max-width: 1920px) {
+    .Appartments {
+        scale: 1;
+    }
+}
+
+/*
+Laptop L
+*/
+@media only screen and (max-width: 1440px) {
+    .buildingWrapper {
+        top: 25vh;
+        width: 80%;
+    }
+
+    .homeContainer h3 {
+        font-size: 18px;
+    }
+
+    .homeContainer h1 {
+        font-size: 40px;
+    }
+
+    .gridItem img {
+        max-width: 20vw;
+        /* height: auto; */
+    }
+
+    .gridItem {
+        font-size: 21px;
+        /* max-width: 21vw;
+        max-height: 28vw; */
+    }
+
+    .appartmentsContainer {
+        height: 65vh;
+    }
+}
+
+/*
+Laptop S
+*/
+@media only screen and (max-width: 1024px) {
+    .homeContainer {}
+
+    .homeContainer h3 {
+        font-size: 18px;
+    }
+
+    .homeContainer h1 {
+        font-size: 40px;
+    }
+
+    .appartmentsContainer {
+        width: 64%;
+        height: 65vh;
+    }
+
+    .appartmentsSection {
+        padding: 35px 35px 0 35px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .filter {
+        display: none;
+    }
+
+    .appartmentsContainer {
+        width: 100%;
+        height: 72vh;
+    }
+
+
+
+    .gimgGeorgianText {
+        font-size: 1.8em;
+    }
+
+    h4 {
+        font-size: 1em;
+    }
+
+    .bold {
+        font-size: 1.8em;
+    }
+
+    .gridItem img {
+        height: 13rem;
+        /* height: auto; */
+        width: auto;
+        max-height: 186px;
+        max-width: 256px;
+
+    }
+
+    .gridItem {
+        height: auto;
+        max-height: 60vw;
+        padding: 3%;
+    }
+
+    .gridItem .navbarButton {
+        font-size: 0.8rem;
+        padding: 2%;
+    }
+
+    .itemComponents h3 {
+        font-size: 1rem;
+    }
+
+    .primaryButton span {
+        display: none;
+    }
+
+    .primaryButton {
+        padding: 1%;
+    }
+
+    .displayNone {
+        display: none;
+    }
+
+    .appartmentsButtons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .filterBtn {
+        display: block;
+        background-color: #042B48;
+        padding: 8%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+
+}
+
+@media only screen and (max-width: 425px) {
+    .gimgGeorgianText {
+        font-size: 1em;
+    }
+
+    .appartmentsHeader h4 {
+        font-size: 0.8em;
+        color: #375c77;
+    }
+
+    .bold {
+        font-size: 1em;
+    }
+
+    .blueH3 {
+        color: #375c77;
+    }
+
+    .appartmentsSection {
+        padding: 18px;
+
+    }
+
+    .selectionSection {
+        margin-top: 45px;
+    }
+
+    .appartmentsContainer {
+        gap: 24px;
+        height: 89%;
+    }
+
+
+
+    .gridItem img {
+        height: auto;
+        width: auto;
+        max-height: 157px;
+        max-width: 199px;
+
+    }
+
+    .gridItem {
+        width: 100%;
+        max-height: 71vw;
+    }
+
+
+}

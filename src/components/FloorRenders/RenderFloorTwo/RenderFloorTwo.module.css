@@ -1,0 +1,9 @@
+.flatCover {
+    opacity: 0;
+    cursor: pointer;
+}
+
+.flatCover:hover {
+    cursor: pointer;
+    opacity: 1;
+}

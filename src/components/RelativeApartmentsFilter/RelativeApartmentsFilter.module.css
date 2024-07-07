@@ -1,0 +1,261 @@
+.ApartmentsFilter {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    color: black;
+    padding: 30px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ApartmentsFilterMinimized {
+    position: absolute;
+    background-color: white;
+    color: black;
+    padding: 30px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    display: flex;
+    top: calc(10vh + 16px);
+    right: 5vw;
+}
+
+.ApartmentsFilterMinimized:hover {
+    cursor: pointer;
+}
+
+.FilterDiv {
+    border-bottom: 1px solid rgb(183, 183, 183);
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border-bottom: 1px solid rgb(183, 183, 183); */
+    padding: 10px 0;
+    width: 100%;
+    gap: 10px;
+    height: 5%;
+}
+
+.content p {
+    margin: 0;
+    size: 14px;
+}
+
+.content h4 {
+    font-size: 14px;
+}
+
+
+.content img {
+    width: 12px;
+    height: auto;
+}
+
+.FilterDiv:hover {
+    cursor: pointer;
+}
+
+.content .FilterPng {
+    width: 25px;
+    height: auto;
+}
+
+.FloorNumber {
+    display: flex;
+    align-items: center;
+}
+
+.FloorNumber div {
+    border-radius: 50%;
+    background-color: var(--primary-accent);
+    color: white;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    margin-left: 4px;
+}
+
+.selectFloor {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+    display: none;
+}
+
+.numberItem {
+    border-radius: 50%;
+    background-color: rgb(19, 134, 218, 12%);
+    color: var(--primary-accent);
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.numberItemSelected {
+    border-radius: 50%;
+    color: var(--text-white);
+    background-color: var(--primary-accent);
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ButtonBlue {
+    font-family: var(--body-font);
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 1000px;
+    border: none;
+    color: var(--text-white);
+    background-color: var(--primary-accent);
+    padding: 12px;
+    transition: all 0.15s ease;
+    width: 100%;
+}
+
+.ButtonBlue:hover {
+    cursor: pointer;
+}
+
+.ButtonLight {
+    color: var(--primary-accent);
+    background-color: rgb(19, 134, 218, 12%);
+}
+
+.areaItemContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    overflow: scroll;
+    height: 10vh;
+}
+
+.areaItemContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.areaItems {
+    border-radius: 99px;
+    background-color: rgb(19, 134, 218, 12%);
+    color: var(--primary-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    font-size: 14px;
+}
+
+.areaItemsSelected {
+    border-radius: 99px;
+    color: var(--text-white);
+    background-color: var(--primary-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    font-size: 14px;
+}
+
+.FilterSection {
+    margin-top: -6%;
+    width: 100%;
+    height: 95%;
+}
+
+.FilterSectionMinimized {
+    width: 100%;
+}
+
+.slider {}
+
+.filterButtons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clear {
+    font-family: var(--body-font);
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 1000px;
+    background-color: white;
+    color: var(--primary-accent);
+    border: none;
+    padding: 12px;
+    transition: all 0.15s ease;
+    width: 100%;
+}
+
+.clear {
+    cursor: pointer;
+}
+
+
+/*
+Laptop L
+*/
+@media only screen and (max-width: 1440px) {
+
+    .ButtonBlue {
+
+        padding: 10px 5px;
+    }
+
+    .ButtonBlue h4 {
+        font-size: 0.7em;
+    }
+}
+
+/*
+Laptop S
+*/
+
+@media only screen and (max-width: 1024px) {
+    .ApartmentsFilter {
+        /* width: 28vw; */
+        padding: 14px;
+        width: 115%;
+    }
+
+    .ButtonBlue {
+        padding: 2%;
+        font-size: 14px;
+
+    }
+
+
+    .ButtonBlue h4 {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .ApartmentsFilter {
+        display: none;
+    }
+
+}
+
+
+@media only screen and (max-width: 425px) {
+    .ApartmentsFilter {
+        width: 100%;
+        right: 0;
+        box-shadow: 0px 26px 80px 1000px rgba(0, 0, 0, 0.45);
+    }
+}

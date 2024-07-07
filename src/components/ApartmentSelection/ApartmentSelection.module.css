@@ -1,0 +1,277 @@
+.apartmentSelection {
+    width: 100%;
+    display: flex;
+    top: 0;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    height: 99vh;
+}
+
+.nonClickable {
+    pointer-events: none;
+}
+
+.homeContainer {
+    top: 15vh;
+    left: 5%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sectionContainer {
+    width: 100%;
+}
+
+.selectFloor {
+    border-left: 6px solid #0062A9;
+    padding: 0 0 0 1vw;
+}
+
+.buildingWrapper {
+    top: 30vh;
+    position: absolute;
+    display: flex;
+    justify-items: left;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+
+.covers {
+    left: auto;
+    top: 430px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.cover {
+    opacity: 0;
+    z-index: 1;
+    border: none;
+}
+
+.cover:hover {
+    opacity: 100%;
+    cursor: pointer;
+}
+
+.selectionBackgroundWrapper {
+    width: 100%;
+}
+
+.selectionBackground {
+    width: 100%;
+}
+
+.FilterDiv {
+    position: absolute;
+    top: 10vh;
+    border-bottom: 1px solid rgb(183, 183, 183);
+    background-color: white;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border-bottom: 1px solid rgb(183, 183, 183); */
+    padding: 16px 0;
+}
+
+.content p {
+    margin: 0;
+    size: 14px;
+}
+
+
+.content img {
+    width: 12px;
+    height: auto;
+}
+
+.content .FilterPng {
+    width: 30px;
+    height: auto;
+}
+
+@font-face {
+    font-family: 'GIMG Georgian';
+    src: url('../../assets/fonts/bpg_mrgvlovani_caps_2010.ttf');
+}
+
+.gimgGeorgianText {
+    font-family: 'GIMG Georgian';
+    white-space: nowrap;
+}
+
+@font-face {
+    font-family: 'GIMG Georgian';
+    src: url('../../assets/fonts/bpg_mrgvlovani_caps_2010.ttf');
+}
+
+.gimgGeorgianText {
+    font-family: 'GIMG Georgian';
+    white-space: nowrap;
+}
+
+.grayText {
+    color: #caced0;
+}
+
+.mobileBuilding {
+    display: none;
+}
+
+.selectionButtons {
+    display: none;
+}
+
+.filterButtonMobile:hover {
+    cursor: pointer;
+}
+
+/*
+Laptop XL
+*/
+@media only screen and (max-width: 1920px) {}
+
+/*
+Laptop L
+*/
+@media only screen and (max-width: 1440px) {
+    .buildingWrapper {
+        top: 25vh;
+        width: 80%;
+    }
+
+    .homeContainer h3 {
+        font-size: 18px;
+    }
+
+    .homeContainer h1 {
+        font-size: 36px;
+    }
+}
+
+/*
+Laptop S
+*/
+@media only screen and (max-width: 1024px) {
+
+
+    .homeContainer h3 {
+        font-size: 1em;
+    }
+
+    .homeContainer h1 {
+        font-size: 1.6em;
+    }
+
+    .selectFloor {
+        padding: 0 0 0 10px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+
+    .selectionBackground {
+        display: none;
+    }
+
+    .homeContainer h1 {
+        font-size: 1.5em;
+        display: inline-block;
+        word-wrap: break-word;
+        white-space: pre-line;
+    }
+
+    .homeContainer h3 {
+        display: none;
+    }
+
+    .selectFloor {
+        padding: 0 0 0 20px;
+        width: 90%;
+    }
+
+    .mobileBuilding {
+        top: 32vh;
+        position: absolute;
+        display: flex;
+        justify-items: left;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .buildingWrapper {
+        display: none;
+    }
+
+    .selectionButtons {
+        display: block;
+        position: absolute;
+        top: 80vh;
+        gap: 10px;
+        width: 90%;
+    }
+
+    .selectionBtn1 {
+        font-family: var(--body-font);
+        font-size: 15px;
+        font-weight: 600;
+        border-radius: 1000px;
+        border: none;
+        color: var(--text-white);
+        background-color: #011A2C;
+        padding: var(--spacing-sm) var(--spacing-md);
+        transition: all 0.15s ease;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .selectionBtn1:hover {
+        cursor: pointer;
+    }
+
+    .selectionBtn1 svg {
+        margin-left: 10px;
+    }
+
+    .selectionBtn2 {
+        font-family: var(--body-font);
+        font-size: 15px;
+        font-weight: 600;
+        border-radius: 1000px;
+        border: none;
+        color: var(--text-white);
+        background-color: var(--primary-accent);
+        padding: var(--spacing-sm) var(--spacing-md);
+        transition: all 0.15s ease;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+
+
+
+}
+
+@media only screen and (max-width: 425px) {
+    .homeContainer h1 {
+        font-size: 1em;
+    }
+}

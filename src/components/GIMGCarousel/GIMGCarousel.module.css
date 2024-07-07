@@ -1,0 +1,116 @@
+.GIMGCarousel {
+    margin-top: 5%;
+    width: 100%;
+    user-select: none;
+}
+
+.carouselList {
+    height: 70vh;
+}
+
+.carouselItem {
+    margin: 0 2vw 0 2vw;
+}
+
+.carouselItem:hover {
+    cursor: pointer;
+}
+
+.carouselList::-webkit-scrollbar {
+    display: none;
+}
+
+.roundButton:hover {
+    cursor: pointer;
+}
+
+.carouselImg {
+    pointer-events: none;
+    user-select: none;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.dots {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    margin: auto;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+/*
+Laptop XL
+*/
+@media only screen and (max-width: 4000px) {
+    .GIMGCarousel {
+        margin-top: 2%;
+        width: 100%;
+        user-select: none;
+    }
+
+    .carouselList {
+        height:70vh;
+    }
+}
+
+/*
+Laptop XL
+*/
+@media only screen and (max-width: 1920px) {
+    .GIMGCarousel {
+        margin-top: 5%;
+        width: 100%;
+        user-select: none;
+    }
+
+    .carouselList {
+        height: 60vh;
+    }
+}
+
+/*
+Laptop L
+*/
+@media only screen and (max-width: 1440px) {
+
+}
+
+/*
+Laptop S
+*/
+@media only screen and (max-width: 1024px) {
+    .GIMGCarousel {
+        margin-top: 2%;
+        width: 100%;
+        user-select: none;
+    }
+
+    .carouselList {
+        height: 40vh;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .GIMGCarousel {
+        margin-top: 2%;
+        width: 100%;
+        user-select: none;
+    }
+
+    .carouselList {
+        height: 30vh;
+    }
+}
+
+@media only screen and (max-width: 425px){
+    .carouselList {
+        height: 30vh;
+    }
+}

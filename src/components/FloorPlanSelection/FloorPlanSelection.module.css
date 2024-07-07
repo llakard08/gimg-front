@@ -1,0 +1,365 @@
+.twoColumn {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.twoColumn>.colReft {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 var(--spacing-md) 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.twoColumn>.colRight {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 0 0 var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.hero .twoColumn .colLeft {
+    width: 70%;
+}
+
+.hero .twoColumn .colRight {
+    width: 30%;
+}
+
+.hero {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 210px;
+    position: relative;
+}
+
+.hero p {
+    max-width: 865px;
+}
+
+.buttonContainer {
+    display: flex;
+    margin: var(--spacing-md) 0;
+}
+
+.buttonContainer button:nth-of-type(2) {
+    margin: 0 0 0 var(--spacing-md);
+    color: var(--purple-2);
+}
+
+.hero .heroPicContainer {
+    height: 564px;
+    align-items: flex-end;
+
+}
+
+.heroPic {
+    height: 1500px;
+    transform: translate(130px, 40px);
+    user-select: none;
+    z-index: 0;
+}
+
+.scrollDown {
+    display: flex;
+    align-items: center;
+}
+
+.heroLines {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 13%;
+    text-align: center;
+    height: 747.81px;
+    z-index: -1;
+}
+
+.colLeft h1 {
+    padding: 10px 0px 30px 0px;
+}
+
+.hero .colLeft h3 {
+    letter-spacing: 8px;
+}
+
+.colLeft .primaryButton {
+    margin: 50px 0 183px 0;
+}
+
+.hero .primaryButton {
+    padding: 28px 94px;
+}
+
+.hero .withIcon>img {
+    margin-left: 30px;
+}
+
+button {
+    justify-content: center;
+    display: flex;
+}
+
+.sectionContainer {
+    width: 70%;
+    height: 92vh;
+}
+
+.primaryButton {
+    font-family: var(--body-font);
+    font-size: var(--button-size);
+    font-weight: 600;
+    border-radius: 1000px;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-white);
+    background-color: var(--primary-accent);
+    padding: var(--spacing-sm) var(--spacing-md);
+    transition: all 0.15s ease;
+}
+
+.primaryButton:hover {
+    background-color: var(--primary-button-hover);
+    cursor: pointer;
+}
+
+
+.navbarButton {
+    background-color: var(--button-blue);
+    color: var(--text-white);
+}
+
+.navbarButton:hover {
+    background-color: rgba(250, 250, 250, 0.5);
+}
+
+.FloorPlanSelection {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 94vh;
+    margin-top: 4%;
+    padding: 0 5% 0 5%;
+    pointer-events: auto;
+}
+
+.floorPlanSection {
+    background-color: var(--bg-blue);
+    z-index: 2;
+    /* position: absolute; */
+    box-sizing: border-box;
+    /* top: 8vh; */
+    padding: 50px 50px 10px 50px;
+    box-shadow: 0px 26px 80px 1000px rgba(0, 0, 0, 0.45);
+    border-radius: 30px 30px 0 0;
+    height: 100%;
+}
+
+
+.sectionContainer {
+    width: 100%;
+}
+
+.floorHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blueH3 {
+    color: #1386DA;
+    white-space: nowrap;
+}
+
+.bold {
+    font-size: 40px;
+}
+
+.light {
+    color: #375c77;
+}
+
+.floorButtons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 70px 0 70px 0;
+}
+
+.floorButtons .primaryButton {
+    background-color: #042B48;
+}
+
+.floorLine {
+    width: 70%;
+    height: 0.1px;
+    border: 1px solid #06243a;
+}
+
+.floorPlan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 45vh;
+}
+
+.floorPlanImage {
+    width: 100%;
+    height: 100%;
+    min-width: 600px;
+    min-height: 200px;
+    max-width: 1400px;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+@font-face {
+    font-family: 'GIMG Georgian';
+    src: url('../../assets/fonts/bpg_mrgvlovani_caps_2010.ttf');
+}
+
+.gimgGeorgianText {
+    font-family: 'GIMG Georgian';
+    white-space: nowrap;
+}
+
+.flatCover {
+    opacity: 0;
+    cursor: pointer;
+}
+
+.flatCover:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+/*
+Laptop XL
+*/
+@media only screen and (max-width: 1920px) {}
+
+/*
+Laptop L
+*/
+@media only screen and (max-width: 1440px) {
+    .floorPlanSection h3 {
+        font-size: 20px;
+    }
+
+    .floorPlanSection h1 {
+        font-size: 44px;
+    }
+
+    .floorPlanSection h4 {
+        font-size: 15px;
+    }
+
+    .floorPlanSection p {
+        font-size: 15px;
+    }
+}
+
+/*
+Laptop S
+*/
+@media only screen and (max-width: 1024px) {
+    .floorPlanSection h3 {
+        font-size: 15px;
+    }
+
+    .floorPlanSection h1 {
+        font-size: 30px;
+    }
+
+    .floorPlanSection h4 {
+        font-size: 12px;
+    }
+
+    .floorPlanSection p {
+        font-size: 15px;
+    }
+
+    .floorPlanSection {
+        padding: 35px 35px 0 35px;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 768px) {
+    .floorButtons {
+        margin: 27px 0 145px 0;
+    }
+
+    .floorPlan {
+        rotate: 90deg;
+    }
+
+    .floorPlanSection {
+        padding: 35px
+    }
+
+    .floorPlanSection h4 {
+        font-size: 1em;
+    }
+
+    .nowrap {
+        font-size: 0.8em;
+    }
+
+    .floorHeader .nowrap {
+        display: none;
+    }
+
+    .bold {
+        font-size: 1em;
+    }
+
+    .blueH3 {
+        color: #375c77;
+    }
+
+
+}
+
+@media only screen and (max-width: 425px) {
+    .floorPlanSection {
+        padding: 18px
+    }
+
+
+
+    .floorPlanImage {
+        width: auto;
+        height: auto;
+
+        max-width: 1354px;
+    }
+
+    .primaryButton h4 {
+        font-size: 13px;
+    }
+
+    .primaryButton {
+        padding: 2%;
+    }
+}

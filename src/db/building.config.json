@@ -1,0 +1,1792 @@
+{
+  "minPrice": 0,
+  "maxPrice": 3500,
+  "floors": [
+    {
+      "floorNumber": 1,
+      "numberOfApartments": 7,
+      "apartments": [
+        {
+          "apartmentNumber": 1,
+          "apartmentArea": 88.80,
+          "balcony": 8.30,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 1,
+          "price": 2300,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-1.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 2,
+          "apartmentArea": 74.00,
+          "balcony": 8.40,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 1,
+          "price": 2300,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-2.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 3,
+          "apartmentArea": 67.30,
+          "balcony": 8.30,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 1,
+          "price": 2300,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-3.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 4,
+          "apartmentArea": 66.80,
+          "balcony": 10.70,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 1,
+          "price": 2300,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-4.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 5,
+          "apartmentArea": 63.40,
+          "balcony": 10.90,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 1,
+          "price": 2300,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-5.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 6,
+          "apartmentArea": 53.80,
+          "balcony": 10.90,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 1,
+          "price": 2300,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-6.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 7,
+          "apartmentArea": 156.60,
+          "balcony": 10.10,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 1,
+          "price": 2300,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-7.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "floorNumber": 2,
+      "numberOfApartments": 7,
+      "apartments": [
+        {
+          "apartmentNumber": 1,
+          "apartmentArea": 88.80,
+          "balcony": 8.30,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 2,
+          "price": 2300,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-1.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 2,
+          "apartmentArea": 74.00,
+          "balcony": 8.40,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 2,
+          "price": 2300,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-2.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 3,
+          "apartmentArea": 67.30,
+          "balcony": 8.30,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 2,
+          "price": 2300,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-3.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 4,
+          "apartmentArea": 66.80,
+          "balcony": 10.70,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 2,
+          "price": 2300,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-4.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 5,
+          "apartmentArea": 63.40,
+          "balcony": 10.90,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 2,
+          "price": 2300,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-5.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 6,
+          "apartmentArea": 53.80,
+          "balcony": 10.90,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 2,
+          "price": 2300,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-6.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 7,
+          "apartmentArea": 156.60,
+          "balcony": 10.10,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 2,
+          "price": 2300,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-7.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "floorNumber": 3,
+      "numberOfApartments": 8,
+      "apartments": [
+        {
+          "apartmentNumber": 1,
+          "apartmentArea": 88.80,
+          "balcony": 8.30,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 3,
+          "price": 2600,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-1.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 2,
+          "apartmentArea": 74.00,
+          "balcony": 8.40,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 3,
+          "price": 2600,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-2.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 3,
+          "apartmentArea": 67.30,
+          "balcony": 8.30,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 3,
+          "price": 2600,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-3.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 4,
+          "apartmentArea": 66.80,
+          "balcony": 10.70,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 3,
+          "price": 2600,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-4.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 5,
+          "apartmentArea": 63.40,
+          "balcony": 10.90,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 3,
+          "price": 2600,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-5.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 6,
+          "apartmentArea": 53.80,
+          "balcony": 10.90,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 3,
+          "price": 2600,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-6.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 7,
+          "apartmentArea": 87.80,
+          "balcony": 10.10,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 3,
+          "price": 2600,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-8.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 8,
+          "apartmentArea": 68.40,
+          "balcony": 0.00,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 3,
+          "price": 2600,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-9.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "floorNumber": 4,
+      "numberOfApartments": 8,
+      "apartments": [
+        {
+          "apartmentNumber": 1,
+          "apartmentArea": 88.80,
+          "balcony": 8.30,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 4,
+          "price": 2600,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-1.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 2,
+          "apartmentArea": 74.00,
+          "balcony": 8.40,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 4,
+          "price": 2600,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-2.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 3,
+          "apartmentArea": 67.30,
+          "balcony": 8.30,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 4,
+          "price": 2600,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-3.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 4,
+          "apartmentArea": 66.80,
+          "balcony": 10.70,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 4,
+          "price": 2600,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-4.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 5,
+          "apartmentArea": 63.40,
+          "balcony": 10.90,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 4,
+          "price": 2600,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-5.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 6,
+          "apartmentArea": 53.80,
+          "balcony": 10.90,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 4,
+          "price": 2600,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-6.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 7,
+          "apartmentArea": 95.20,
+          "balcony": 10.10,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 4,
+          "price": 2600,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-10.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 8,
+          "apartmentArea": 68.40,
+          "balcony": 0.00,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 4,
+          "price": 2600,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-11.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "floorNumber": 5,
+      "numberOfApartments": 8,
+      "apartments": [
+        {
+          "apartmentNumber": 1,
+          "apartmentArea": 88.80,
+          "balcony": 8.30,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 5,
+          "price": 2900,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-1.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 2,
+          "apartmentArea": 74.00,
+          "balcony": 8.40,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 5,
+          "price": 2900,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-2.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 3,
+          "apartmentArea": 67.30,
+          "balcony": 8.30,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 5,
+          "price": 2900,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-3.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 4,
+          "apartmentArea": 66.80,
+          "balcony": 10.70,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 5,
+          "price": 2900,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-4.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 5,
+          "apartmentArea": 63.40,
+          "balcony": 10.90,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 5,
+          "price": 2900,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-5.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 6,
+          "apartmentArea": 53.80,
+          "balcony": 10.90,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 5,
+          "price": 2900,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-6.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 7,
+          "apartmentArea": 101.80,
+          "balcony": 10.10,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 5,
+          "price": 2900,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-10.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 8,
+          "apartmentArea": 68.40,
+          "balcony": 0.00,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 5,
+          "price": 2900,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-11.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "floorNumber": 6,
+      "numberOfApartments": 8,
+      "apartments": [
+        {
+          "apartmentNumber": 1,
+          "apartmentArea": 88.80,
+          "balcony": 8.30,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 6,
+          "price": 2900,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-1.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 2,
+          "apartmentArea": 74.00,
+          "balcony": 8.40,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 6,
+          "price": 2900,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-2.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 3,
+          "apartmentArea": 67.30,
+          "balcony": 8.30,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 6,
+          "price": 2900,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-3.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 4,
+          "apartmentArea": 66.80,
+          "balcony": 10.70,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 6,
+          "price": 2900,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-4.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 5,
+          "apartmentArea": 63.40,
+          "balcony": 10.90,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 6,
+          "price": 2900,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-5.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 6,
+          "apartmentArea": 53.80,
+          "balcony": 10.90,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 6,
+          "price": 2900,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-6.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 7,
+          "apartmentArea": 108.90,
+          "balcony": 10.10,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 6,
+          "price": 2900,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-10.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 8,
+          "apartmentArea": 68.40,
+          "balcony": 0.00,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 6,
+          "price": 2900,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-11.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "floorNumber": 7,
+      "numberOfApartments": 4,
+      "apartments": [
+        {
+          "apartmentNumber": 1,
+          "apartmentArea": 92.20,
+          "balcony": 8.30,
+          "type": "duplex",
+          "sold": false,
+          "floorNumber": 7,
+          "price": 3500,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-12-1.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ],
+          "linkedApartment": {
+            "apartmentArea": 82.60,
+            "balcony": 17.00,
+            "pictureName": "apartment-12-2.png"
+          }
+        },
+        {
+          "apartmentNumber": 2,
+          "apartmentArea": 105.96,
+          "balcony": 13.08,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 7,
+          "price": 3500,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-13.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 3,
+          "apartmentArea": 104.19,
+          "balcony": 17.05,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 7,
+          "price": 3500,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-14.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 4,
+          "apartmentArea": 119.20,
+          "balcony": 21.80,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 7,
+          "price": 3500,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-15.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "floorNumber": 8,
+      "numberOfApartments": 4,
+      "apartments": [
+        {
+          "apartmentNumber": 1,
+          "apartmentArea": 92.20,
+          "balcony": 8.30,
+          "type": "duplex",
+          "sold": false,
+          "floorNumber": 8,
+          "price": 3500,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-12-1.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ],
+          "linkedApartment": {
+            "apartmentArea": 82.60,
+            "balcony": 17.00,
+            "pictureName": "apartment-12-2.png"
+          }
+        },
+        {
+          "apartmentNumber": 2,
+          "apartmentArea": 105.96,
+          "balcony": 13.08,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 8,
+          "price": 3500,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-13.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 3,
+          "apartmentArea": 104.19,
+          "balcony": 17.05,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 8,
+          "price": 3500,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-14.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        },
+        {
+          "apartmentNumber": 4,
+          "apartmentArea": 119.20,
+          "balcony": 21.80,
+          "type": "standard",
+          "sold": false,
+          "floorNumber": 8,
+          "price": 3500,
+          "entranceArea": 14.5,
+          "kitchenArea": 10.1,
+          "bathroomArea": 5.5,
+          "loungeArea": 4.1,
+          "bedrooms": [
+            {
+              "area": 10.5
+            }
+          ],
+          "outerSpaces": [
+            {
+              "area": 4.5
+            }
+          ],
+          "pictureName": "apartment-15.png",
+          "benefits": [
+            {
+              "languageKey": "sun.side"
+            },
+            {
+              "languageKey": "sea.view"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

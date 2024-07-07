@@ -1,0 +1,419 @@
+.whyGimgSection h1 {
+    font-family: 'GIMG Georgian';
+    white-space: nowrap;
+}
+
+.cardContent h3 {
+    font-family: 'GIMG Georgian';
+    white-space: nowrap;
+}
+
+.card1 {
+    grid-area: card-1;
+}
+
+.card2 {
+    grid-area: card-2;
+}
+
+.card3 {
+    grid-area: card-3;
+}
+
+.card4 {
+    grid-area: card-4;
+}
+
+.card5 {
+    grid-area: card-5;
+}
+
+.card6 {
+    grid-area: card-6;
+}
+
+.cardContent {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.whyGimgSection {
+    display: grid;
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    /* grid-auto-rows: minmax(100px, auto); */
+    grid-template-areas:
+        'why-us why-us'
+        'card-1 card-4'
+        'card-2 card-5'
+        'card-3 card-6';
+    row-gap: 8vh;
+    margin-bottom: 160px;
+    width: 90%;
+}
+
+
+.whyUs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* margin-bottom: 129px; */
+    grid-area: why-us;
+}
+
+.whyGimgPic {
+    max-width: 30%;
+    margin-right: 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.whyGimgIcon {
+    max-width: 150px;
+}
+
+
+.card {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2vw 0 2vw;
+}
+
+
+.lineRight {
+    position: absolute;
+    right: 2vh;
+    top: 14vh;
+    z-index: -1;
+}
+
+.lineLeft {
+    position: absolute;
+    right: 9vh;
+    top: 13vh;
+    z-index: -1;
+}
+
+.card p {
+    margin: 16px 0 0 0;
+}
+
+
+/* about section */
+.aboutSection {
+    z-index: 0;
+    position: relative;
+
+}
+
+.aboutContent {
+    z-index: 1;
+    background-color: #011623;
+    width: 1500px;
+    height: 806px;
+    position: absolute;
+    top: 424px;
+    left: 210px;
+    border-radius: 30px;
+    padding: 75px 99px 0 139px;
+    box-sizing: border-box;
+}
+
+.aboutSection h2 {
+    margin-bottom: 69px;
+}
+
+.aboutSection p {
+    margin-bottom: 50px;
+}
+
+
+.twoColumn {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.twoColumn>.colLeft {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 var(--spacing-md) 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.twoColumn>.colRight {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 0 0 var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.hero .twoColumn .colLeft {
+    width: 70%;
+}
+
+.hero .twoColumn .colRight {
+    width: 30%;
+}
+
+.hero {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 210px;
+    position: relative;
+}
+
+.hero p {
+    max-width: 865px;
+}
+
+.buttonContainer {
+    display: flex;
+    margin: var(--spacing-md) 0;
+}
+
+.buttonContainer button:nth-of-type(2) {
+    margin: 0 0 0 var(--spacing-md);
+    color: var(--purple-2);
+}
+
+.hero .heroPicContainer {
+    height: 564px;
+    align-items: flex-end;
+
+}
+
+.heroPic {
+    height: 1500px;
+    transform: translate(130px, 40px);
+}
+
+.scrollDown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroLines {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 13%;
+    text-align: center;
+    height: 747.81px;
+    z-index: -1;
+}
+
+.colLeft h1 {
+    padding: 10px 0px 30px 0px;
+}
+
+.hero .colLeft h3 {
+    letter-spacing: 8px;
+}
+
+.colLeft .primaryButton {
+    margin: 50px 0 183px 0;
+}
+
+.hero .primaryButton {
+    padding: 28px 94px;
+}
+
+.hero .withIcon>img {
+    margin-left: 30px;
+}
+
+.sectionContainer {
+    padding: 0 5% 0 5%;
+}
+
+.primaryButton {
+    font-family: var(--body-font);
+    font-size: var(--button-size);
+    font-weight: 600;
+    border-radius: 1000px;
+    border: none;
+    color: var(--text-white);
+    background-color: var(--primary-accent);
+    padding: var(--spacing-sm) var(--spacing-md);
+    transition: all 0.15s ease;
+}
+
+.primaryButton:hover {
+    background-color: var(--primary-button-hover);
+    cursor: pointer;
+}
+
+@font-face {
+    font-family: 'GIMG Georgian';
+    src: url('../../assets/fonts/bpg_mrgvlovani_caps_2010.ttf');
+}
+
+.grayText {
+    color: #caced0;
+}
+
+/*
+Laptop XL
+*/
+@media only screen and (max-width: 1920px) {
+    .whyGimgSection h1 {
+        font-size: 3em;
+    }
+
+    .cardContent h3 {
+        font-size: 1.25em;
+    }
+
+    .cardContent p {
+        font-size: 1em;
+    }
+}
+
+/*
+Laptop L
+*/
+@media only screen and (max-width: 1440px) {
+    .whyGimgSection h1 {
+        font-size: 2.5em;
+    }
+
+    .cardContent h3 {
+        font-size: 1.1em;
+    }
+
+    .cardContent p {
+        font-size: 0.8em;
+    }
+
+    .whyGimgIcon {
+        scale: 0.8;
+    }
+
+    .whyGimgSection {
+        row-gap: 5vh;
+    }
+}
+
+/*
+Laptop S
+*/
+@media only screen and (max-width: 1024px) {
+    .whyGimgSection h1 {
+        font-size: 1.7em;
+    }
+
+    .cardContent h3 {
+        font-size: 0.8em;
+    }
+
+    .cardContent p {
+        font-size: 0.55em;
+    }
+
+    .whyGimgIcon {
+        scale: 0.6;
+    }
+
+    .whyGimgSection {
+        row-gap: 2vh;
+    }
+
+    .whyGimgPic {
+        margin-right: 15px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .whyGimgSection {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 'why-us'
+            'card-1'
+            'card-2'
+            'card-3'
+            'card-4'
+            'card-5'
+            'card-6';
+        row-gap: 15vw;
+        margin-bottom: 0
+    }
+
+    .whyGimgPic {
+        margin-right: 20px;
+    }
+
+    .whyGimgIcon {
+        scale: 0.6;
+    }
+
+    .cardContent {
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+    }
+
+    .whyGimgSection h1 {
+        display: inline-block;
+        word-wrap: break-word;
+        white-space: pre-line;
+        text-align: center;
+    }
+
+}
+
+@media only screen and (max-width: 425px) {
+
+    .whyGimgSection {
+        width: 136%;
+        scale: 0.7;
+        row-gap: 30vw;
+        margin-bottom: 0
+    }
+
+    .whyGimgPic {
+        margin-right: 20px;
+    }
+
+
+
+    .whyGimgSection h1 {
+        display: inline-block;
+        word-wrap: break-word;
+        white-space: pre-line;
+        text-align: center;
+    }
+
+    .cardContent p {
+        font-size: 13px;
+    }
+
+    /* .whyGimgIcon {
+        scale: 0.6;
+    } */
+
+    .lineRight {
+        right: 3vh;
+        top: 11vh;
+    }
+
+    .lineLeft {
+        right: 11vh;
+        top: 11vh;
+    }
+}

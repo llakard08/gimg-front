@@ -1,0 +1,656 @@
+.twoColumn {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.twoColumn>.colReft {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 var(--spacing-md) 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.twoColumn>.colRight {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 0 0 var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.hero .twoColumn .colLeft {
+    width: 70%;
+}
+
+.hero .twoColumn .colRight {
+    width: 30%;
+}
+
+.hero {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 210px;
+    position: relative;
+}
+
+.hero p {
+    max-width: 865px;
+}
+
+.buttonContainer {
+    display: flex;
+    margin: var(--spacing-md) 0;
+}
+
+.buttonContainer button:nth-of-type(2) {
+    margin: 0 0 0 var(--spacing-md);
+    color: var(--purple-2);
+}
+
+.hero .heroPicContainer {
+    height: 564px;
+    align-items: flex-end;
+
+}
+
+.heroPic {
+    height: 1500px;
+    transform: translate(130px, 40px);
+    user-select: none;
+    z-index: 0;
+}
+
+.scrollDown {
+    display: flex;
+    align-items: center;
+}
+
+.heroLines {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 13%;
+    text-align: center;
+    height: 747.81px;
+    z-index: -1;
+}
+
+.colLeft h1 {
+    padding: 10px 0px 30px 0px;
+}
+
+.hero .colLeft h3 {
+    letter-spacing: 8px;
+}
+
+.colLeft .primaryButton {
+    margin: 50px 0 183px 0;
+}
+
+.hero .primaryButton {
+    padding: 28px 94px;
+}
+
+.hero .withIcon>img {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+button {
+    justify-content: center;
+    display: flex;
+}
+
+.sectionContainer {
+    width: 80%;
+    height: 100%;
+}
+
+.primaryButton {
+    font-family: var(--body-font);
+    font-size: var(--button-size);
+    font-weight: 600;
+    border-radius: 1000px;
+    border: none;
+    color: var(--text-white);
+    background-color: var(--primary-accent);
+    padding: var(--spacing-sm) var(--spacing-md);
+    transition: all 0.15s ease;
+    justify-content: center;
+    align-items: center;
+}
+
+.primaryButton:hover {
+    background-color: var(--primary-button-hover);
+    cursor: pointer;
+}
+
+
+.navbarButton {
+    background-color: var(--button-blue);
+    color: var(--text-white);
+}
+
+.navbarButton:hover {
+    background-color: rgba(250, 250, 250, 0.5);
+}
+
+.FloorPlanSelection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.floorPlanSection {
+    background-color: var(--bg-blue);
+    z-index: 2;
+    position: absolute;
+    top: 200px;
+    padding: 50px 50px 10px 50px;
+    box-shadow: 0px 26px 80px 1000px rgba(0, 0, 0, 0.45);
+    border-radius: 30px 30px 0 0;
+}
+
+.sectionContainer {
+    width: 80%;
+}
+
+.floorHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blueH3 {
+    color: #1386DA;
+}
+
+.bold {
+    font-size: 40px;
+}
+
+.light {
+    color: #375c77;
+}
+
+.floorButtons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 70px 0 70px 0;
+}
+
+.floorButtons .primaryButton {
+    background-color: #042B48;
+}
+
+.floorLine {
+    width: 70%;
+    height: 0.1px;
+    border: 1px solid #06243a;
+}
+
+.floorPlan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+.FlatSelection {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 94vh;
+    margin-top: 3%;
+    padding: 0 5% 0 5%;
+    pointer-events: auto;
+}
+
+.FlatSelection h1 {
+    white-space: nowrap;
+}
+
+.FlatSelection h2 {
+    white-space: nowrap;
+}
+
+.FlatSelection h3 {
+    white-space: nowrap;
+}
+
+.FlatSelection h4 {
+    white-space: nowrap;
+}
+
+.FlatSelection p {
+    white-space: nowrap;
+}
+
+.flatSection::-webkit-scrollbar {
+    display: none;
+}
+
+/* flat section */
+.flatSection {
+    background-color: var(--bg-blue);
+    width: 100%;
+    height: 90%;
+    padding: 50px 50px 10px 50px;
+    box-shadow: 0px 26px 80px 1000px rgba(0, 0, 0, 0.45);
+    border-radius: 30px 30px 0 0;
+    overflow-y: scroll;
+}
+
+.flatHr {
+    width: 100%;
+    height: 0.1px;
+    border: 1px solid #06243a;
+}
+
+.flatHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flatRight {
+    display: flex;
+    align-items: center;
+}
+
+.darkHr {
+    /* height: 110px; */
+    border: 1px solid #06243a;
+    margin: 0 30px;
+}
+
+
+.descriptionSection {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.area {
+    width: 55%;
+}
+
+.wholeArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 20px 0;
+}
+
+.wholeArea h3 {
+    text-align: right;
+}
+
+.wholeArea h4 {
+    text-align: leftó;
+}
+
+.specifications {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+    justify-content: space-between;
+    margin: 30px 0 40px 0;
+}
+
+.specifications h4:nth-child(2n+1) {
+    color: #9f9f9f;
+}
+
+.otherSpecifications {
+    display: flex;
+    align-items: center;
+    margin: 0 0 40px 0;
+    gap: 10px;
+}
+
+.dotContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 99px;
+    background-color: #010E18;
+    padding: 16px 24px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: #1386DA;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.flatPlan {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flatStyle {
+    /* object-fit: scale-down;
+    scale: 1.7; */
+}
+
+.consultation {
+    background-color: rgba(19, 134, 218, 5%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid rgba(19, 134, 218, 24%);
+
+}
+
+.consultation h3 {
+    margin: 0 0 8px 0;
+}
+
+.consultation .primaryButton {
+    background-color: rgba(19, 134, 218, 12%);
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.gallery hr {
+    width: 35%;
+    height: 0.1px;
+    border: 1px solid #06243a;
+    margin: 0;
+}
+
+.smth {
+    margin-right: 30px;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.phoneNumber {
+    white-space: nowrap;
+    font-size: 16px;
+    color: var(--text-light);
+}
+
+@font-face {
+    font-family: 'GIMG Georgian';
+    src: url('../../assets/fonts/bpg_mrgvlovani_caps_2010.ttf');
+}
+
+.gimgGeorgianText {
+    font-family: 'GIMG Georgian';
+    white-space: nowrap;
+}
+
+
+/*
+Laptop XL
+*/
+@media only screen and (max-width: 1920px) {}
+
+/*
+Custom break
+*/
+@media only screen and (max-width: 1650px) {
+    .otherSpecifications h4 {
+        font-size: 0.9em;
+    }
+}
+
+/*
+Laptop L
+*/
+@media only screen and (max-width: 1440px) {
+    .flatPlan img {
+        width: auto;
+        max-width: 100%;
+    }
+
+    .consultation {
+        padding: 15px;
+    }
+
+    .consultation h3 {
+        font-size: 20px;
+    }
+
+    .flatSection h4 {
+        font-size: 15px;
+    }
+}
+
+/*
+Laptop S
+*/
+@media only screen and (max-width: 1024px) {
+    .consultation h3 {
+        font-size: 14px;
+    }
+
+    .otherSpecifications h4 {
+        font-size: 13px;
+    }
+
+    .dot {
+        margin-right: 5px;
+    }
+
+    .dotContainer {
+        padding: 8px 2px;
+    }
+
+    h4 {
+        font-size: 13px;
+    }
+
+    .consultation {
+        padding: 10px;
+    }
+
+    .flatSection .primaryButton {
+        padding: 5px;
+    }
+
+    /* .consultation .primaryButton {
+        padding: 2%;
+    } */
+
+    .flatHeader .primaryButton img {
+        width: 16px;
+    }
+
+    .flatSection {
+        padding: 35px 35px 0 35px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .descriptionSection {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+    }
+
+    .specifications {
+        grid-template-columns: auto auto;
+        gap: 30px;
+        justify-content: space-between;
+        margin: 30px 0 40px 0;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .bold {
+        font-size: 1.8em;
+    }
+
+    .flatSection {
+        padding: 35px;
+    }
+
+    .area {
+        width: 100%;
+    }
+
+    .flatPlan {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        margin-top: 15px;
+    }
+
+    .flatPlan img {
+        /* width: auto;
+        max-width: 100%; */
+        /* width: 30vh;
+        height: 50vh; */
+    }
+
+    .dotContainer {
+        padding: 5% 2%;
+    }
+
+    .otherSpecifications {
+        flex-direction: column;
+        align-items: baseline;
+    }
+
+    .consultation {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .nowrap {
+        font-size: 0.8rem;
+    }
+
+    .consultation div {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .gallery {
+        justify-content: center;
+    }
+
+    .flatRight {
+        flex-direction: row-reverse;
+    }
+
+    .nowrap {
+        display: none;
+    }
+
+    .FlatSelection .primaryButton img {
+        width: 18px;
+        margin: 0;
+    }
+
+}
+
+@media only screen and (max-width: 425px) {
+
+
+
+    .flatSection {
+        padding: 18px;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    .bold {
+        font-size: 1em;
+    }
+
+    .consultation h3 {
+        font-size: 1em;
+    }
+
+    .area {
+        width: 100%;
+    }
+
+    .consultation {
+        align-items: flex-start;
+        width: 92%;
+    }
+
+    .nowrap {
+        display: none;
+    }
+
+    .consultation div {
+        text-align: start;
+    }
+
+    .consultation a {
+        font-size: 1em;
+    }
+
+    .gallery {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .consultation h4 {
+        color: #9f9f9f;
+    }
+
+    .phoneNumber {
+        margin: 0 2%;
+    }
+
+    .flatRight {
+        flex-direction: row-reverse;
+    }
+
+    .flatPlan {
+        width: 100%;
+    }
+
+    /* .flatPlan img {
+        width: 17vh;
+        height: 45vh;
+    } */
+
+    .GIMGCarousel {
+        padding-top: 0;
+    }
+
+
+}

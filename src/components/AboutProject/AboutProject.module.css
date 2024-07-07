@@ -1,0 +1,251 @@
+.aboutProject {
+    width: 100%;
+    margin-top: 1%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.aboutSection {
+    z-index: 0;
+    width: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutContent {
+    background-color: #011623;
+    max-width: 85%;
+    position: absolute;
+    top: 30%;
+    height: 100%;
+    border-radius: 30px;
+    padding: 75px 99px 0 139px;
+    box-sizing: border-box;
+}
+
+.aboutPic {
+    width: 100%;
+}
+
+.aboutSectionPic {
+    width: 100%;
+}
+
+.aboutSection h2 {
+    margin-bottom: 69px;
+}
+
+.aboutSection p {
+    margin-bottom: 50px;
+}
+
+.aboutPicCover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: linear-gradient(rgba(19, 134, 218, 0.37), rgba(1, 23, 38, 0.02));
+    top: 0;
+}
+
+@font-face {
+    font-family: 'GIMG Georgian';
+    src: url('../../assets/fonts/bpg_mrgvlovani_caps_2010.ttf');
+}
+
+.gimgGeorgianText {
+    font-family: 'GIMG Georgian';
+    white-space: nowrap;
+}
+
+.creatorData {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutUsDescriptionCreatorNames {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+
+.aboutUsDescriptionCreatorWorks {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+
+.creatorAndWork {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.companyName {
+    display: flex;
+}
+
+.flag {
+    object-fit: scale-down;
+}
+
+.creatorAndWork p {
+    padding-left: 10px;
+}
+
+.showMore {
+    display: none;
+}
+/*
+Laptop XL
+*/
+@media only screen and (max-width: 4000px) {
+    .aboutContent {
+        height: 75%;
+        top: 15%;
+        padding: 50px 100px 0 100px;
+    }
+
+    .aboutContent h2 {
+        font-size: 3.0em;
+        margin-bottom: 0;
+    }
+
+    .aboutContent p {
+        font-size: 1.2em;
+        margin-bottom: 0;
+        line-height: 1.8em;
+    }
+}
+
+/*
+Laptop XL
+*/
+@media only screen and (max-width: 1920px) {
+    .aboutContent {
+        top: 10%;
+        height: 80%;
+        padding: 50px 100px 0 100px;
+    }
+
+    .aboutContent p {
+        font-size: 1.2em;
+        margin-bottom: 0;
+        line-height: 1.5em;
+    }
+
+    .flag {
+        scale: 0.9;
+    }
+
+}
+
+/*
+Laptop L
+*/
+@media only screen and (max-width: 1440px) {
+    .aboutContent {
+        top: 10%;
+        height: 90%;
+        padding: 40px 100px 0 100px;
+    }
+
+    .aboutContent h2 {
+        font-size: 1.2em;
+        margin-bottom: 0;
+    }
+
+    .aboutContent p {
+        font-size: 0.7em;
+        margin-bottom: 0;
+        line-height: 1.05em;
+    }
+
+    .flag {
+        scale: 0.75;
+    }
+}
+
+/*
+Laptop S
+*/
+@media only screen and (max-width: 1024px) {
+    .aboutContent {
+        top: 7%;
+        height: 93%;
+        padding: 25px 50px 0 50px;
+    }
+
+    .aboutContent h2 {
+        font-size: 1em;
+        margin-bottom: 0;
+    }
+
+    .aboutContent p {
+        font-size: 0.6em;
+        margin-bottom: 0;
+        line-height: 1.05em;
+    }
+
+    .flag {
+        scale: 0.6;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .aboutContent {
+        padding: 30px 30px 0 30px;
+        height: 90%;
+    }
+
+    .aboutProject {
+        margin-top: 13%;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .aboutProject {
+        margin-top: 0;
+    }
+
+    .aboutContent {
+        top: 7%;
+        height: 90%;
+        padding: 20px 20px 0 20px;
+        max-width: 90%;
+    }
+
+    .authors {
+        display: none;
+    }
+
+    .creatorData {
+        display: none;
+    }
+
+    .aboutUsPartThree {
+        display: none;
+    }
+
+    .showMore {
+        display: flex;
+    }
+
+    .showMore:hover {
+        display: flex;
+        color: #7e888e;
+        cursor: pointer;
+    }
+}
