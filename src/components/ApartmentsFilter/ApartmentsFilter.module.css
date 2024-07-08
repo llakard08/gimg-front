@@ -158,7 +158,6 @@
     background-color: rgb(19, 134, 218, 12%);
     color: var(--primary-accent);
     display: flex;
-    align-items: center;
     justify-content: center;
     padding: 2%;
     font-size: 14px;
@@ -210,7 +209,6 @@
 .clear:hover {
     cursor: pointer;
 }
-
 
 /*
 Laptop L

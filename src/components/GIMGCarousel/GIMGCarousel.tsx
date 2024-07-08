@@ -1,7 +1,10 @@
 import React, {FC} from 'react';
 import styles from './GIMGCarousel.module.css';
+import carousel1 from '../../assets/images/carousel-1.png'
 import carousel2 from '../../assets/images/carousel-2.png'
 import carousel3 from '../../assets/images/carousel-3.png'
+import carousel4 from '../../assets/images/carousel-4.png'
+import carousel5 from '../../assets/images/carousel-5.png'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
@@ -43,10 +46,7 @@ const GIMGCarousel: FC<GIMGCarouselProps> = () => {
             containerClass={styles.carouselList}
             dotListClass={styles.dots}>
             <div>
-                <img className={styles.carouselImg} src={carousel2} alt=""/>
-            </div>
-            <div>
-                <img className={styles.carouselImg} src={carousel3} alt=""/>
+                <img className={styles.carouselImg} src={carousel1} alt=""/>
             </div>
             <div>
                 <img className={styles.carouselImg} src={carousel2} alt=""/>
@@ -55,16 +55,10 @@ const GIMGCarousel: FC<GIMGCarouselProps> = () => {
                 <img className={styles.carouselImg} src={carousel3} alt=""/>
             </div>
             <div>
-                <img className={styles.carouselImg} src={carousel2} alt=""/>
+                <img className={styles.carouselImg} src={carousel4} alt=""/>
             </div>
             <div>
-                <img className={styles.carouselImg} src={carousel3} alt=""/>
-            </div>
-            <div>
-                <img className={styles.carouselImg} src={carousel2} alt=""/>
-            </div>
-            <div>
-                <img className={styles.carouselImg} src={carousel3} alt=""/>
+                <img className={styles.carouselImg} src={carousel5} alt=""/>
             </div>
         </Carousel>
     </div>

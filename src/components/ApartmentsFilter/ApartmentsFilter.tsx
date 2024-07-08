@@ -23,7 +23,7 @@ const ApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
     const [floorsVisible, setFloorsVisible] = useState<boolean>(true);
     const [areasVisible, setAreasVisible] = useState<boolean>(true);
     const [sliderVisible, setSliderVisible] = useState<boolean>(true);
-    const [standardSelected, setStandardSelected] = useState<boolean>(true);
+    const [standardSelected, setStandardSelected] = useState<boolean>(false);
     const [duplexSelected, setDuplexSelected] = useState<boolean>(false);
     const [standardApartmentAreas, setStandardApartmentAreas] = useState<number[]>([]);
     const [duplexApartmentAreas, setDuplexApartmentAreas] = useState<number[]>([]);
@@ -60,8 +60,10 @@ const ApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
             setSelectedAreas(lastSearchInput.selectedAreas)
             setSelectedFloorsQuantity(lastSearchInput.selectedFloorsQuantity)
             setSelectedFloors(lastSearchInput.selectedFloors)
+            lastSearchInput.selectedType === 'standard' ? setStandardSelected(true) : setDuplexSelected(true);
         }
     }, [])
+
 
     function clearSearchInputs() {
         setSelectedAreas((prevState) => {
@@ -79,6 +81,8 @@ const ApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
             return newState;
         })
         setSelectedFloorsQuantity(0)
+        setStandardSelected(false)
+        setDuplexSelected(false)
         localStorage.removeItem("lastSearchInput")
     }
 
@@ -95,7 +99,7 @@ const ApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
         const areasToDisplaySet = new Set(apartmentAreasToDisplay);
         let result: Apartment[] = []
         building.floors.forEach((floor) => {
-            if (selectedFloors[floor.floorNumber - 1]) {
+            if (selectedFloors[floor.floorNumber - 5]) {
                 floor.apartments.forEach((apartment) => {
                     const totalArea: number = Number((apartment.apartmentArea + apartment.balcony + (apartment.linkedApartment ? (apartment.linkedApartment?.apartmentArea + apartment.linkedApartment?.balcony) : 0)).toFixed(2));
                     if (areasToDisplaySet.has(totalArea)) {
@@ -113,7 +117,7 @@ const ApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
             setErrorMessage((prevState) => 'Apartments by your description do not exist')
         } else {
             let lastSearchInput: LastSearchInputs = {
-                selectedType: 'standard',
+                selectedType: standardSelected ? 'standard' : 'duplex',
                 selectedFloors: selectedFloors,
                 selectedFloorsQuantity: selectedFloorsQuantity,
                 selectedAreas: selectedAreas,
@@ -203,7 +207,7 @@ const ApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
                     <div className={styles.content} onClick={() => {
                         setSliderVisible(!sliderVisible)
                     }}>
-                        <p>{t("filter.desired.price.label")}</p>
+                        <p>{t("filter.desired.price.label")} {t("meter.label")}<sup>2</sup></p>
                         <img src={ArrowDown} alt=""/>
                     </div>
                     <div className={styles.slider} style={{display: sliderVisible ? "flex" : "none"}}>
@@ -257,7 +261,7 @@ const ApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
                                                     setSelectedFloorsQuantity(selectedQuantity)
                                                     return newStates;
                                                 })
-                                            }}>{index + 1}
+                                            }}>{index + 5}
                                 </div>;
                             })
                         }
@@ -282,7 +286,7 @@ const ApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
                                                  newStates[index] = !newStates[index];
                                                  return newStates;
                                              })
-                                         }}>{apartmentArea} {t("meter.label")}<sup>2</sup>
+                                         }}>{apartmentArea} {t("meter.label")}²
                                     </div>);
                             })
                         }

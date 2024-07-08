@@ -22,7 +22,7 @@ const RelativeApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
     const [floorsVisible, setFloorsVisible] = useState<boolean>(true);
     const [sliderVisible, setSliderVisible] = useState<boolean>(true);
     const [areasVisible, setAreasVisible] = useState<boolean>(true);
-    const [standardSelected, setStandardSelected] = useState<boolean>(true);
+    const [standardSelected, setStandardSelected] = useState<boolean>(false);
     const [duplexSelected, setDuplexSelected] = useState<boolean>(false);
     const [standardApartmentAreas, setStandardApartmentAreas] = useState<number[]>([]);
     const [duplexApartmentAreas, setDuplexApartmentAreas] = useState<number[]>([]);
@@ -58,6 +58,7 @@ const RelativeApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
             setSelectedAreas(lastSearchInput.selectedAreas)
             setSelectedFloorsQuantity(lastSearchInput.selectedFloorsQuantity)
             setSelectedFloors(lastSearchInput.selectedFloors)
+            lastSearchInput.selectedType === 'standard' ? setStandardSelected(true) : setDuplexSelected(true);
         }
     }, [])
 
@@ -77,6 +78,8 @@ const RelativeApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
             return newState;
         })
         setSelectedFloorsQuantity(0)
+        setStandardSelected(false)
+        setDuplexSelected(false)
         localStorage.removeItem("lastSearchInput")
     }
 
@@ -245,7 +248,7 @@ const RelativeApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
                                                     setSelectedFloorsQuantity(selectedQuantity)
                                                     return newStates;
                                                 })
-                                            }}>{index + 1}
+                                            }}>{index + 5}
                                 </div>;
                             })
                         }

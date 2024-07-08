@@ -32,7 +32,7 @@ const FloorPlanSelection: FC<FloorPlanSelectionProps> = (props) => {
 
     const [buildingFloors, setBuildingFloors] = useState<Floor[]>([]);
 
-    function loadBuildingFloors(floorNumber: number) {
+    function loadBuildingFloors() {
         const building = buildingConfig as Building;
         setBuildingFloors(building.floors)
     }
@@ -43,7 +43,7 @@ const FloorPlanSelection: FC<FloorPlanSelectionProps> = (props) => {
     }
 
     useEffect(() => {
-        loadBuildingFloors(1)
+        loadBuildingFloors()
         const item = localStorage.getItem("selectedLanguage");
         if (item !== undefined && item !== null) {
             handleLanguageChange(item)
@@ -52,55 +52,55 @@ const FloorPlanSelection: FC<FloorPlanSelectionProps> = (props) => {
 
     function displaySelectedFloorRender() {
         switch (props.selectedFloorNumber) {
-            case 1:
+            case 5:
                 return <RenderFloorOne
                     setFloorPlanSectionVisible={props.setFloorPlanSectionVisible}
                     setFlatSectionVisible={props.setFlatSectionVisible}
-                    apartmentsOfCurrentFloor={buildingFloors.find((floor: Floor) => floor.floorNumber === 1)?.apartments!}
+                    apartmentsOfCurrentFloor={buildingFloors.find((floor: Floor) => floor.floorNumber === 5)?.apartments!}
                     setSelectedApartment={props.setSelectedApartment}
                 ></RenderFloorOne>;
-            case 2:
+            case 6:
                 return <RenderFloorTwo
                     setFloorPlanSectionVisible={props.setFloorPlanSectionVisible}
                     setFlatSectionVisible={props.setFlatSectionVisible}
                     setSelectedApartment={props.setSelectedApartment}
-                    apartmentsOfCurrentFloor={buildingFloors.find((floor: Floor) => floor.floorNumber === 2)?.apartments!}></RenderFloorTwo>;
-            case 3:
+                    apartmentsOfCurrentFloor={buildingFloors.find((floor: Floor) => floor.floorNumber === 6)?.apartments!}></RenderFloorTwo>;
+            case 7:
                 return <RenderFloorThree
                     setFloorPlanSectionVisible={props.setFloorPlanSectionVisible}
                     setFlatSectionVisible={props.setFlatSectionVisible}
                     setSelectedApartment={props.setSelectedApartment}
-                    apartmentsOfCurrentFloor={buildingFloors.find((floor: Floor) => floor.floorNumber === 3)?.apartments!}></RenderFloorThree>;
-            case 4:
+                    apartmentsOfCurrentFloor={buildingFloors.find((floor: Floor) => floor.floorNumber === 7)?.apartments!}></RenderFloorThree>;
+            case 8:
                 return <RenderFloorFour
                     setFloorPlanSectionVisible={props.setFloorPlanSectionVisible}
                     setFlatSectionVisible={props.setFlatSectionVisible}
                     setSelectedApartment={props.setSelectedApartment}
-                    apartmentsOfCurrentFloor={buildingFloors.find((floor: Floor) => floor.floorNumber === 4)?.apartments!}></RenderFloorFour>;
-            case 5:
+                    apartmentsOfCurrentFloor={buildingFloors.find((floor: Floor) => floor.floorNumber === 8)?.apartments!}></RenderFloorFour>;
+            case 9:
                 return <RenderFloorFive
                     setFloorPlanSectionVisible={props.setFloorPlanSectionVisible}
                     setFlatSectionVisible={props.setFlatSectionVisible}
                     setSelectedApartment={props.setSelectedApartment}
-                    apartmentsOfCurrentFloor={buildingFloors.find((floor: Floor) => floor.floorNumber === 5)?.apartments!}></RenderFloorFive>;
-            case 6:
+                    apartmentsOfCurrentFloor={buildingFloors.find((floor: Floor) => floor.floorNumber === 9)?.apartments!}></RenderFloorFive>;
+            case 10:
                 return <RenderFloorSix
                     setFloorPlanSectionVisible={props.setFloorPlanSectionVisible}
                     setFlatSectionVisible={props.setFlatSectionVisible}
                     setSelectedApartment={props.setSelectedApartment}
-                    apartmentsOfCurrentFloor={buildingFloors.find((floor: Floor) => floor.floorNumber === 6)?.apartments!}></RenderFloorSix>;
-            case 7:
+                    apartmentsOfCurrentFloor={buildingFloors.find((floor: Floor) => floor.floorNumber === 10)?.apartments!}></RenderFloorSix>;
+            case 11:
                 return <RenderFloorSeven
                     setFloorPlanSectionVisible={props.setFloorPlanSectionVisible}
                     setFlatSectionVisible={props.setFlatSectionVisible}
                     setSelectedApartment={props.setSelectedApartment}
-                    apartmentsOfCurrentFloor={buildingFloors.find((floor: Floor) => floor.floorNumber === 7)?.apartments!}></RenderFloorSeven>;
-            case 8:
+                    apartmentsOfCurrentFloor={buildingFloors.find((floor: Floor) => floor.floorNumber === 11)?.apartments!}></RenderFloorSeven>;
+            case 12:
                 return <RenderFloorEight
                     setFloorPlanSectionVisible={props.setFloorPlanSectionVisible}
                     setFlatSectionVisible={props.setFlatSectionVisible}
                     setSelectedApartment={props.setSelectedApartment}
-                    apartmentsOfCurrentFloor={buildingFloors.find((floor: Floor) => floor.floorNumber === 8)?.apartments!}></RenderFloorEight>;
+                    apartmentsOfCurrentFloor={buildingFloors.find((floor: Floor) => floor.floorNumber === 12)?.apartments!}></RenderFloorEight>;
             default:
                 return;
         }
@@ -120,9 +120,9 @@ const FloorPlanSelection: FC<FloorPlanSelectionProps> = (props) => {
                         <h2 className={styles.gimgGeorgianText}>{props.selectedFloorNumber} {t("floor.label")}</h2>
                         <h4 className={styles.blueH3}><span
                             className={styles.nowrap}>{t("available.label")}</span> {t("apartment.label")} <span
-                            className={styles.bold}>4 </span>
+                            className={styles.bold}>{4} </span>
                             <span
-                                className={styles.light}>/ 8
+                                className={styles.light}>/ {5}
                         </span></h4>
                     </div>
                     <button className={`${styles.primaryButton} ${styles.navbarButton}  ${styles.withIcon}`}
@@ -139,17 +139,17 @@ const FloorPlanSelection: FC<FloorPlanSelectionProps> = (props) => {
                 <div className={styles.floorButtons}>
 
                     <button className={`${styles.primaryButton} ${styles.withIcon}`}
-                            disabled={props.selectedFloorNumber <= 1}
+                            disabled={props.selectedFloorNumber <= 5}
                             onClick={() => props.setSelectedFloorNumber(props.selectedFloorNumber - 1)}>
                         <img src={arrowHeadLeft} alt=""/>
-                        <h4 className={styles.nowrap}>{props.selectedFloorNumber <= 1 ? props.selectedFloorNumber : props.selectedFloorNumber - 1} {t("floor.label")}</h4>
+                        <h4 className={styles.nowrap}>{props.selectedFloorNumber <= 5 ? props.selectedFloorNumber : props.selectedFloorNumber - 1} {t("floor.label")}</h4>
                     </button>
                     <hr className={styles.floorLine}/>
 
                     <button className={`${styles.primaryButton} ${styles.withIcon}`}
-                            disabled={props.selectedFloorNumber >= 8}
+                            disabled={props.selectedFloorNumber >= 12}
                             onClick={() => props.setSelectedFloorNumber(props.selectedFloorNumber + 1)}>
-                        <h4 className={styles.nowrap}>{props.selectedFloorNumber >= 8 ? props.selectedFloorNumber : props.selectedFloorNumber + 1} {t("floor.label")}</h4>
+                        <h4 className={styles.nowrap}>{props.selectedFloorNumber >= 12 ? props.selectedFloorNumber : props.selectedFloorNumber + 1} {t("floor.label")}</h4>
                         <img src={arrowHeadRight} alt=""/>
                     </button>
                 </div>

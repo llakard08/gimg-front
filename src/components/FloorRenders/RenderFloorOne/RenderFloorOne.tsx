@@ -19,7 +19,7 @@ const RenderFloorOne: FC<RenderFloorOneProps> = (props) => {
     function isApartmentSold(flatNumber: number) {
         if (props.apartmentsOfCurrentFloor === undefined) {
             setTimeout(() => {
-                isApartmentSold(flatNumber)
+                return isApartmentSold(flatNumber)
             }, 1000);
         } else {
             return props.apartmentsOfCurrentFloor[flatNumber - 1].sold
