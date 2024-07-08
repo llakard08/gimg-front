@@ -107,6 +107,10 @@
 .showMore {
     display: none;
 }
+
+.showLess {
+    display: none;
+}
 /*
 Laptop XL
 */
@@ -213,6 +217,38 @@ Laptop S
     .aboutProject {
         margin-top: 13%;
     }
+
+    .authors {
+        display: none;
+    }
+
+    .creatorData {
+        display: none;
+    }
+
+    .aboutUsPartThree {
+        display: none;
+    }
+
+    .showMore {
+        display: flex;
+    }
+
+    .showMore:hover {
+        display: flex;
+        color: #7e888e;
+        cursor: pointer;
+    }
+
+    .showLess {
+        display: flex;
+    }
+
+    .showLess:hover {
+        display: flex;
+        color: #7e888e;
+        cursor: pointer;
+    }
 }
 
 @media only screen and (max-width: 425px) {
@@ -244,6 +280,16 @@ Laptop S
     }
 
     .showMore:hover {
+        display: flex;
+        color: #7e888e;
+        cursor: pointer;
+    }
+
+    .showLess {
+        display: flex;
+    }
+
+    .showLess:hover {
         display: flex;
         color: #7e888e;
         cursor: pointer;

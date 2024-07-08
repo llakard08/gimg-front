@@ -108,6 +108,10 @@ const AboutProject: FC<AboutProjectProps> = () => {
                     </div>
                     <p className={styles.aboutUsPartThree}
                        style={showMoreSelected ? {display: "flex"} : {}}>{t("aboutUs.description.part.three")} </p>
+                    {showMoreSelected && <p className={styles.showLess} onClick={() => {
+                        setShowMoreSelected(false)
+                    }}>{t("aboutUs.description.show.less")}</p>
+                    }
                 </div>
             </div>
         </div>
