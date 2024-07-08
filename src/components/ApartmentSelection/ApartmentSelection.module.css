@@ -54,13 +54,15 @@
 }
 
 .cover {
-    opacity: 0;
+    fill-opacity: 1;
+    fill: #00131f;
     z-index: 1;
     border: none;
 }
 
 .cover:hover {
-    opacity: 100%;
+    opacity: 0.35;
+    fill: #0062A9;
     cursor: pointer;
 }
 
