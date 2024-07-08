@@ -11,6 +11,7 @@ interface RenderFloorOneProps {
 
 const RenderFloorOne: FC<RenderFloorOneProps> = (props) => {
     function displaySelectedFlat(flatNumber: number, props: RenderFloorOneProps) {
+        if(isApartmentSold(flatNumber)) return;
         props.setFlatSectionVisible(true)
         props.setFloorPlanSectionVisible(false)
         props.setSelectedApartment(props.apartmentsOfCurrentFloor.find((apartment: Apartment) => apartment.apartmentNumber === flatNumber))

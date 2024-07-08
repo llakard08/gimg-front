@@ -11,6 +11,7 @@ interface RenderFloorEightProps {
 
 const RenderFloorEight: FC<RenderFloorEightProps> = (props) => {
     function displaySelectedFlat(flatNumber: number, props: RenderFloorEightProps) {
+        if(isApartmentSold(flatNumber)) return;
         props.setFlatSectionVisible(true)
         props.setFloorPlanSectionVisible(false)
         props.setSelectedApartment(props.apartmentsOfCurrentFloor.find((apartment: Apartment) => apartment.apartmentNumber === flatNumber))

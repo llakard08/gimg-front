@@ -11,6 +11,7 @@ interface RenderFloorThreeProps {
 
 const RenderFloorThree: FC<RenderFloorThreeProps> = (props) => {
     function displaySelectedFlat(flatNumber: number, props: RenderFloorThreeProps) {
+        if(isApartmentSold(flatNumber)) return;
         props.setFlatSectionVisible(true)
         props.setFloorPlanSectionVisible(false)
         props.setSelectedApartment(props.apartmentsOfCurrentFloor.find((apartment: Apartment) => apartment.apartmentNumber === flatNumber))

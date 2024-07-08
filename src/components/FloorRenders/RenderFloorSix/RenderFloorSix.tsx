@@ -11,6 +11,7 @@ interface RenderFloorSixProps {
 
 const RenderFloorSix: FC<RenderFloorSixProps> = (props) => {
     function displaySelectedFlat(flatNumber: number, props: RenderFloorSixProps) {
+        if(isApartmentSold(flatNumber)) return;
         props.setFlatSectionVisible(true)
         props.setFloorPlanSectionVisible(false)
         props.setSelectedApartment(props.apartmentsOfCurrentFloor.find((apartment: Apartment) => apartment.apartmentNumber === flatNumber))
