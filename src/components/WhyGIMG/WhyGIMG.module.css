@@ -380,6 +380,7 @@ Laptop S
 @media only screen and (max-width: 425px) {
 
     .whyGimgSection {
+        margin-top: -30vh;
         width: 136%;
         scale: 0.7;
         row-gap: 30vw;
