@@ -17,7 +17,7 @@ interface MobileMenuProps {
 
 const MobileMenu: FC<MobileMenuProps> = (props) => {
     const {t} = useTranslation("global")
-    const availableLanguages = ["Geo", "Rus", "En"];
+    const availableLanguages = ["Geo", "Rus", "Eng"];
     const [selectedLanguage, setSelectedLanguage] = useState<string>("Geo");
     const handleLanguageChange = (lang: string) => {
         setSelectedLanguage(lang);

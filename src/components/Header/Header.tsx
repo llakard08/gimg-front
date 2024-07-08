@@ -20,7 +20,7 @@ const Header: FC<HeaderProps> = (props) => {
     const contact = contactInfo as ContactInfo;
     const [selectedLanguage, setSelectedLanguage] = useState<string>("Geo");
     const [isDropdownActive, setIsDropdownActive] = useState<boolean>(false);
-    const availableLanguages = ["Geo", "Rus", "En"];
+    const availableLanguages = ["Geo", "Rus", "Eng"];
     const handleLanguageChange = (lang: string) => {
         setSelectedLanguage(lang);
         i18n.changeLanguage(lang.toLowerCase());

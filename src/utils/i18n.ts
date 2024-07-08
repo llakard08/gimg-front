@@ -5,7 +5,7 @@ import global_rus from "../assets/languages/rus/global.json"
 import global_geo from "../assets/languages/geo/global.json"
 
 const resources = {
-    en: {
+    eng: {
         global: global_en
     },
     rus: {

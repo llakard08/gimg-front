@@ -11,7 +11,7 @@ interface FooterProps {
 
 const Footer: FC<FooterProps> = () => {
     const {t} = useTranslation("global")
-    const availableLanguages = ["Geo", "Rus", "En"];
+    const availableLanguages = ["Geo", "Rus", "Eng"];
     const [selectedLanguage, setSelectedLanguage] = useState<string>("Geo");
     const [isDropdownActive, setIsDropdownActive] = useState<boolean>(false);
     const handleLanguageChange = (lang: string) => {
