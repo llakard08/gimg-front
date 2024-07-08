@@ -194,7 +194,7 @@ const RelativeApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
                     <div className={styles.content} onClick={() => {
                         setSliderVisible(!sliderVisible)
                     }}>
-                        <p>{t("filter.desired.price.label")}</p>
+                        <p>{t("filter.desired.price.label")} {t("meter.label")}<sup>2</sup></p>
                         <img src={ArrowDown} alt=""/>
                     </div>
                     <div className={styles.slider} style={{display: sliderVisible ? "flex" : "none"}}>
@@ -273,7 +273,7 @@ const RelativeApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
                                                  newStates[index] = !newStates[index];
                                                  return newStates;
                                              })
-                                         }}>{apartmentArea} მ<sup>2</sup>
+                                         }}>{apartmentArea} {t("meter.label")}²
                                     </div>);
                             })
                         }
