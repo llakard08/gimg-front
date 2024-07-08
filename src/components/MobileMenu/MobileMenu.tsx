@@ -7,6 +7,7 @@ import {useTranslation} from 'react-i18next';
 import {ContactInfo} from '../../interfaces/ContactInfo';
 import contactInfo from "../../db/contact-info.config.json"
 import i18n from "../../utils/i18n";
+import {NavLink} from "react-router-dom";
 
 
 interface MobileMenuProps {
@@ -60,10 +61,7 @@ const MobileMenu: FC<MobileMenuProps> = (props) => {
                                       offset={-100}>{t("header.navigation.aboutUs")}</Link>
                             </li>
                             <li>
-                                <Link onClick={() => {
-                                    props.setMobileMenuActive(false)
-                                }} activeClass='active' smooth={true} to='why-gimg'
-                                      offset={0}>{t("header.navigation.project")}</Link>
+                                <NavLink to={"/selection"}>{t("header.navigation.project")}</NavLink>
                             </li>
                             <li>
                                 <Link onClick={() => {
