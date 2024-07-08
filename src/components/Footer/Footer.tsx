@@ -5,6 +5,7 @@ import {Link} from "react-scroll";
 import arrowHeadDown from '../../assets/images/arrow-head-down.png'
 import {useTranslation} from "react-i18next";
 import i18n from "../../utils/i18n";
+import {NavLink} from "react-router-dom";
 
 interface FooterProps {
 }
@@ -56,8 +57,7 @@ const Footer: FC<FooterProps> = () => {
                             </li>
                             <li><Link activeClass='active' smooth={true} to='about-project'
                                       offset={-100}>{t("header.navigation.aboutUs")}</Link></li>
-                            <li><Link activeClass='active' smooth={true} to='why-gimg'
-                                      offset={120}>{t("header.navigation.project")}</Link></li>
+                            <li><NavLink to={"/selection"}>{t("header.navigation.project")}</NavLink></li>
                             <li><Link activeClass='active' smooth={true} to='contact'
                                       offset={0}>{t("header.navigation.contact")}</Link>
                             </li>

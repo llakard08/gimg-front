@@ -9,6 +9,7 @@ import {ContactInfo} from "../../interfaces/ContactInfo";
 import {useTranslation} from "react-i18next";
 import i18n from "../../utils/i18n";
 import MobileMenu from "../MobileMenu/MobileMenu";
+import {NavLink} from "react-router-dom";
 
 interface HeaderProps {
     setMobileMenuActive: Dispatch<SetStateAction<boolean>>,
@@ -72,8 +73,7 @@ const Header: FC<HeaderProps> = (props) => {
                                   offset={-100}>{t("header.navigation.aboutUs")}</Link>
                         </li>
                         <li>
-                            <Link activeClass='active' smooth={true} to='why-gimg'
-                                  offset={120}>{t("header.navigation.project")}</Link>
+                            <NavLink to={"/selection"}>{t("header.navigation.project")}</NavLink>
                         </li>
                         <li>
                             <Link activeClass='active' smooth={true} to='contact'
