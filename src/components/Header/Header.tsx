@@ -81,11 +81,12 @@ const Header: FC<HeaderProps> = (props) => {
                         </li>
                     </ul>
                     <hr/>
-                    <button className={`${styles.primaryButton} ${styles.navbarButton} ${styles.withIcon}`}>
-                        <img src={phoneIcon} className={styles.phoneIcon} alt=""/>
-                        <a href={"tel:".concat(contact.phoneNumber)}
-                           className={styles.phoneNumber}>{contact.phoneNumber}</a>
-                    </button>
+                    <a href={"tel:".concat(contact.phoneNumber)}>
+                        <button className={`${styles.primaryButton} ${styles.navbarButton} ${styles.withIcon}`}>
+                            <img src={phoneIcon} className={styles.phoneIcon} alt=""/>
+                            <a className={styles.phoneNumber}>{contact.phoneNumber}</a>
+                        </button>
+                    </a>
                     <div className={styles.openBtn} onClick={() => {
                         props.setMobileMenuActive(true)
                     }}><span></span><span></span><span></span></div>

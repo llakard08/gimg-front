@@ -71,11 +71,12 @@ const MobileMenu: FC<MobileMenuProps> = (props) => {
                             </li>
                         </ul>
                     </div>
-                    <button className={`${styles.primaryButton} ${styles.navbarButton} ${styles.withIcon}`}>
-                        <img src={phoneIcon} className={styles.phoneIcon} alt=""/>
-                        <a href={"tel:".concat(contact.phoneNumber)}
-                           className={styles.phoneNumber}>{contact.phoneNumber}</a>
-                    </button>
+                    <a href={"tel:".concat(contact.phoneNumber)}>
+                        <button className={`${styles.primaryButton} ${styles.navbarButton} ${styles.withIcon}`}>
+                            <img src={phoneIcon} className={styles.phoneIcon} alt=""/>
+                            <a className={styles.phoneNumber}>{contact.phoneNumber}</a>
+                        </button>
+                    </a>
                 </div>
 
                 <div className={styles.languages}>

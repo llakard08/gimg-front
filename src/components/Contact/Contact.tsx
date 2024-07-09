@@ -34,21 +34,25 @@ const Contact: FC<ContactProps> = () => {
             <div className={styles.mapShadowFromBelow}></div>
             <div className={styles.mapShadowFromAbove}></div>
             <div className={`${styles.contactSection} ${styles.sectionContainer}`}>
-                <div className={styles.contactCard}>
-                    <img src={phoneFrame} className={styles.frame} alt=""/>
-                    <div className={styles.contactInfo}>
-                        <h4 className={styles.grayText}>{t("contact.phone.number.label")}</h4>
-                        <h3>{contact.phoneNumber}</h3>
+                <a href={"tel:".concat(contact.phoneNumber)}>
+                    <div className={styles.contactCard}>
+                        <img src={phoneFrame} className={styles.frame} alt=""/>
+                        <div className={styles.contactInfo}>
+                            <h4 className={styles.grayText}>{t("contact.phone.number.label")}</h4>
+                            <h3>{contact.phoneNumber}</h3>
+                        </div>
                     </div>
-                </div>
+                </a>
                 <hr className={styles.line}/>
-                <div className={styles.contactCard}>
-                    <img src={emailFrame} className={styles.frame} alt=""/>
-                    <div className={styles.contactInfo}>
-                        <h4 className={styles.grayText}>{t("contact.email.label")}</h4>
-                        <h3>{contact.email}</h3>
+                <a href={"mailto:".concat(contact.phoneNumber)}>
+                    <div className={styles.contactCard}>
+                        <img src={emailFrame} className={styles.frame} alt=""/>
+                        <div className={styles.contactInfo}>
+                            <h4 className={styles.grayText}>{t("contact.email.label")}</h4>
+                            <h3>{contact.email}</h3>
+                        </div>
                     </div>
-                </div>
+                </a>
                 <hr className={styles.line}/>
                 <div className={styles.contactCard}>
                     <img src={locationFrame} className={styles.frame} alt=""/>
