@@ -8,7 +8,7 @@ import ReactSlider from "react-slider";
 import "./ApartmentsFilter.css"
 import {useTranslation} from "react-i18next";
 import i18n from "../../utils/i18n";
-import {LastSearchInputs} from "../../interfaces/LastSearchInputs";
+import {LastSearchInputs, NotSelectedSituationsData} from "../../interfaces/GeneralInterfaces";
 
 interface ApartmentsFilterProps {
     setFilterVisible: Dispatch<SetStateAction<boolean>>
@@ -86,6 +86,116 @@ const ApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
         localStorage.removeItem("lastSearchInput")
     }
 
+    function areasAreNotSelected(): boolean {
+        for (let i = 0; i < selectedAreas.length; i++) {
+            if (selectedAreas[i]) return false;
+        }
+        return true;
+    }
+
+    function floorsAreNotSelected(): boolean {
+        for (let i = 0; i < selectedFloors.length; i++) {
+            if (selectedFloors[i]) return false;
+        }
+        return true;
+    }
+
+    function checkForNotSelectedSituations(building: Building): NotSelectedSituationsData {
+        let result: NotSelectedSituationsData = {
+            apartments: [],
+            specificSearchFlag: false
+        }
+        const areasNotSelected = areasAreNotSelected();
+        const floorsNotSelected = floorsAreNotSelected();
+        if (areasNotSelected && floorsNotSelected) {
+            result.specificSearchFlag = false;
+            result.apartments = performAllApartmentsSearch(building);
+        } else if (!areasNotSelected && floorsNotSelected) {
+            result.specificSearchFlag = false;
+            result.apartments = performOnlySpecificAreasSearch(building)
+        } else if (areasNotSelected && !floorsNotSelected) {
+            result.specificSearchFlag = false;
+            result.apartments = performOnlySpecificFloorsSearch(building);
+        } else {
+            result.specificSearchFlag = true;
+        }
+        return result;
+    }
+
+    function performAllApartmentsSearch(building: Building): Apartment[] {
+        let resultApartments: Apartment[] = []
+        building.floors.forEach((floor) => {
+            floor.apartments.forEach((apartment) => {
+                if (!apartment.sold) {
+                    if (apartment.price >= rangeValues[0] && apartment.price <= rangeValues[1]) {
+                        resultApartments.push(apartment);
+                    }
+                }
+            })
+        })
+        return resultApartments;
+    }
+
+    function performOnlySpecificFloorsSearch(building: Building): Apartment[] {
+        let resultApartments: Apartment[] = []
+        building.floors.forEach((floor) => {
+            if (selectedFloors[floor.floorNumber - 5]) {
+                floor.apartments.forEach((apartment) => {
+                    if (!apartment.sold) {
+                        if (apartment.price >= rangeValues[0] && apartment.price <= rangeValues[1]) {
+                            resultApartments.push(apartment);
+                        }
+                    }
+                })
+            }
+        })
+        return resultApartments;
+    }
+
+    function performOnlySpecificAreasSearch(building: Building): Apartment[] {
+        const areasToDisplaySet = new Set(apartmentAreasToDisplay);
+        let resultApartments: Apartment[] = []
+        building.floors.forEach((floor) => {
+            floor.apartments.forEach((apartment) => {
+                const totalArea: number = Number((apartment.apartmentArea + apartment.balcony + (apartment.linkedApartment ? (apartment.linkedApartment?.apartmentArea + apartment.linkedApartment?.balcony) : 0)).toFixed(2));
+                if (areasToDisplaySet.has(totalArea)) {
+                    const index = apartmentAreasToDisplay.indexOf(totalArea);
+                    if (selectedAreas[index]) {
+                        if (!apartment.sold) {
+                            if (apartment.price >= rangeValues[0] && apartment.price <= rangeValues[1]) {
+                                resultApartments.push(apartment);
+                            }
+                        }
+                    }
+                }
+            })
+        })
+        return resultApartments;
+    }
+
+    function performSpecificSearch(building: Building): Apartment[] {
+        const areasToDisplaySet = new Set(apartmentAreasToDisplay);
+        let result: Apartment[] = []
+        building.floors.forEach((floor) => {
+            if (selectedFloors[floor.floorNumber - 5]) {
+                floor.apartments.forEach((apartment) => {
+                    const totalArea: number = Number((apartment.apartmentArea + apartment.balcony + (apartment.linkedApartment ? (apartment.linkedApartment?.apartmentArea + apartment.linkedApartment?.balcony) : 0)).toFixed(2));
+                    if (areasToDisplaySet.has(totalArea)) {
+                        const index = apartmentAreasToDisplay.indexOf(totalArea);
+                        if (selectedAreas[index]) {
+                            if (!apartment.sold) {
+                                if (apartment.price >= rangeValues[0] && apartment.price <= rangeValues[1]) {
+                                    result.push(apartment);
+                                }
+                            }
+                        }
+                    }
+                })
+            }
+        })
+        return result;
+    }
+
     function searchForApartmentsBasedOnFilter() {
         props.setSearchedApartments([])
         setSelectedAreas((prevState) => {
@@ -96,23 +206,14 @@ const ApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
             return newState;
         })
         const building = buildingConfig as Building;
-        const areasToDisplaySet = new Set(apartmentAreasToDisplay);
         let result: Apartment[] = []
-        building.floors.forEach((floor) => {
-            if (selectedFloors[floor.floorNumber - 5]) {
-                floor.apartments.forEach((apartment) => {
-                    const totalArea: number = Number((apartment.apartmentArea + apartment.balcony + (apartment.linkedApartment ? (apartment.linkedApartment?.apartmentArea + apartment.linkedApartment?.balcony) : 0)).toFixed(2));
-                    if (areasToDisplaySet.has(totalArea)) {
-                        const index = apartmentAreasToDisplay.indexOf(totalArea);
-                        if (selectedAreas[index]) {
-                            if (apartment.price >= rangeValues[0] && apartment.price <= rangeValues[1]) {
-                                result.push(apartment);
-                            }
-                        }
-                    }
-                })
-            }
-        })
+        const data = checkForNotSelectedSituations(building);
+        const specificSearchFlag = data.specificSearchFlag;
+        if (!specificSearchFlag) {
+            result = data.apartments
+        } else {
+            result = performSpecificSearch(building)
+        }
         if (result.length === 0) {
             setErrorMessage((prevState) => 'Apartments by your description do not exist')
         } else {

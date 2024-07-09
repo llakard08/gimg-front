@@ -1,3 +1,5 @@
+import {Apartment} from "./Apartments";
+
 export interface LastSearchInputs {
     selectedPriceRange: PriceRange
     selectedType: string
@@ -10,4 +12,10 @@ export interface PriceRange {
     low: number
     high: number
 }
+
+export interface NotSelectedSituationsData {
+    apartments: Apartment[]
+    specificSearchFlag: boolean
+}
+
 
