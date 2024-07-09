@@ -82,8 +82,8 @@ const MobileMenu: FC<MobileMenuProps> = (props) => {
                 <div className={styles.languages}>
                     {
                         availableLanguages.map((language) =>
-                            <button>
-                                <a onClick={() => handleLanguageChange(language)}>{language}</a>
+                            <button className={language === selectedLanguage ?  styles.selectedLanguageButton : styles.languageButton}>
+                                <p className={styles.selectedLanguage} onClick={() => handleLanguageChange(language)}>{language}</p>
                             </button>
                         )
                     }

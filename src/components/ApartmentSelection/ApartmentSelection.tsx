@@ -25,7 +25,7 @@ const ApartmentSelection: FC<ApartmentSelectionProps> = () => {
     const [selectedApartment, setSelectedApartment] = useState<Apartment | undefined>(undefined);
 
     const [filterVisible, setFilterVisible] = useState(true);
-    const [filterMinimized, setFilterMinimized] = useState(false);
+    const [filterMinimized, setFilterMinimized] = useState(true);
     const [apartmentsVisible, setApartmentsVisible] = useState(false);
 
     const [searchedApartments, setSearchedApartments] = useState<Apartment[]>([]);
@@ -53,6 +53,13 @@ const ApartmentSelection: FC<ApartmentSelectionProps> = () => {
 
     function processCurrentFloorSelectionWeb(floorNumber: number) {
         setSelectedFloorNumber(floorNumber)
+        setFloorPlanSectionVisible(true)
+        setFilterVisible(false)
+        setFloorPlanSectionInitiated(true)
+        setApartmentsSectionInitiated(false)
+    }
+
+    function processCurrentFloorSelectionMobile() {
         setFloorPlanSectionVisible(true)
         setFilterVisible(false)
         setFloorPlanSectionInitiated(true)
@@ -244,7 +251,7 @@ const ApartmentSelection: FC<ApartmentSelectionProps> = () => {
             <div className={styles.selectionButtons}>
                 <button onClick={() => {
                     setFilterMinimized(false);
-                }} className={styles.selectionBtn1}> ფილტრი <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                }} className={styles.selectionBtn1}> {t("filter.label")} <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
                                                                  xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" clipRule="evenodd"
                           d="M6.95866 14.5834C6.95866 14.2382 6.67883 13.9584 6.33366 13.9584H2.16699C1.82182 13.9584 1.54199 14.2382 1.54199 14.5834C1.54199 14.9285 1.82182 15.2084 2.16699 15.2084H6.33366C6.67883 15.2084 6.95866 14.9285 6.95866 14.5834Z"
@@ -267,9 +274,8 @@ const ApartmentSelection: FC<ApartmentSelectionProps> = () => {
                 </svg>
                 </button>
                 <button onClick={() => {
-                    setFloorPlanSectionVisible(true)
-                    setFilterVisible(false)
-                }} className={styles.selectionBtn2}>გაგრძელება
+                    processCurrentFloorSelectionMobile()
+                }} className={styles.selectionBtn2}>{t("continue.label")}
                 </button>
             </div>
             {floorPlanSectionVisible &&

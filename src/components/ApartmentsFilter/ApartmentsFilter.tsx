@@ -198,13 +198,6 @@ const ApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
 
     function searchForApartmentsBasedOnFilter() {
         props.setSearchedApartments([])
-        setSelectedAreas((prevState) => {
-            let newState = [...prevState];
-            newState.forEach((areaState, index) => {
-                newState[index] = false;
-            })
-            return newState;
-        })
         const building = buildingConfig as Building;
         let result: Apartment[] = []
         const data = checkForNotSelectedSituations(building);

@@ -1,11 +1,12 @@
 import React, {Dispatch, FC, SetStateAction} from 'react';
 import {Apartment} from "../../../interfaces/Apartments";
 import styles from "../RenderFloorOne/RenderFloorOne.module.css";
+import {FloorData} from "../../../interfaces/GeneralInterfaces";
 
 interface RenderFloorThreeProps {
     setFloorPlanSectionVisible: Dispatch<SetStateAction<boolean>>
     setFlatSectionVisible: Dispatch<SetStateAction<boolean>>
-    apartmentsOfCurrentFloor: Apartment[]
+    floorData: FloorData
     setSelectedApartment: Dispatch<SetStateAction<Apartment | undefined>>
 }
 
@@ -14,16 +15,16 @@ const RenderFloorThree: FC<RenderFloorThreeProps> = (props) => {
         if(isApartmentSold(flatNumber)) return;
         props.setFlatSectionVisible(true)
         props.setFloorPlanSectionVisible(false)
-        props.setSelectedApartment(props.apartmentsOfCurrentFloor.find((apartment: Apartment) => apartment.apartmentNumber === flatNumber))
+        props.setSelectedApartment(props.floorData.apartmentsOfCurrentFloor.find((apartment: Apartment) => apartment.apartmentNumber === flatNumber))
     }
 
     function isApartmentSold(flatNumber: number) {
-        if (props.apartmentsOfCurrentFloor === undefined) {
+        if (props.floorData.apartmentsOfCurrentFloor === undefined) {
             setTimeout(() => {
-                isApartmentSold(flatNumber)
+                return isApartmentSold(flatNumber)
             }, 1000);
         } else {
-            return props.apartmentsOfCurrentFloor[flatNumber - 1].sold
+            return props.floorData.apartmentsOfCurrentFloor[flatNumber - 1].sold
         }
     }
 
@@ -53,7 +54,7 @@ const RenderFloorThree: FC<RenderFloorThreeProps> = (props) => {
                           displaySelectedFlat(6, props)
                       }}
                       d="M650.5 238.5L691 65.5C736 80.5 760 87.5 808 111.5L781.5 190L754.5 179.5L726.5 261.5L650.5 238.5Z"
-                      fill={isApartmentSold(6) ? "#640303" : "##10324C"}/>
+                      fill={isApartmentSold(6) ? "#640303" : "#10324C"}/>
                 <path className={styles.flatCover}
                       onClick={() => {
                           displaySelectedFlat(5, props)
@@ -65,7 +66,7 @@ const RenderFloorThree: FC<RenderFloorThreeProps> = (props) => {
                           displaySelectedFlat(4, props)
                       }}
                       d="M448.5 215L447 27C494.396 29.5783 521.133 31.9534 569 37.5V39L553 219.5L516 215H496.5L478.5 214.5L460 215H448.5Z"
-                      fill={isApartmentSold(4) ? "#640303" : "##10324C"}/>
+                      fill={isApartmentSold(4) ? "#640303" : "#10324C"}/>
                 <path className={styles.flatCover}
                       onClick={() => {
                           displaySelectedFlat(3, props)
@@ -77,7 +78,7 @@ const RenderFloorThree: FC<RenderFloorThreeProps> = (props) => {
                           displaySelectedFlat(2, props)
                       }}
                       d="M218.5 62L220 38.5C262.5 39.5 283.353 41.1559 322.5 34L326 57.5L334.5 122.5L339.5 161L351 226.5L300.5 236.5L288 240.5L246.5 255L238 212L222.5 135L221 123L218.5 62Z"
-                      fill={isApartmentSold(2) ? "#640303" : "##10324C"}/>
+                      fill={isApartmentSold(2) ? "#640303" : "#10324C"}/>
                 <path className={styles.flatCover}
                       onClick={() => {
                           displaySelectedFlat(1, props)

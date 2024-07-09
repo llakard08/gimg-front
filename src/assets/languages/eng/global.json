@@ -14,7 +14,7 @@
   "hero.card.search.button.label": "Choose your Apartment",
   "hero.scroll.down.label" : "Scroll down for more information",
 
-  "whyGimg.header.main.label": "Why you should choose us?",
+  "whyGimg.header.main.label": "Why should you choose us?",
   "whyGimg.header.structure.label": "Structure",
   "whyGimg.header.courtyard.label": "Courtyard",
   "whyGimg.header.facade.label": "Facade",
@@ -75,6 +75,8 @@
   "consultation.label": "Consultation",
   "call.now.label": "Call Us",
   "gallery.label": "Gallery",
+  "filter.label" : "Filter",
+  "continue.label" : "Continue",
 
   "sea.view": "Sea View",
   "sun.side": "Sun Side"

@@ -6,6 +6,20 @@
     overflow-y: hidden;
 }
 
+.languageButton {
+
+}
+
+.selectedLanguageButton {
+    border: none;
+    color: var(--text-white);
+    background-color: var(--primary-accent);
+    padding: 0 15px;
+}
+
+.selectedLanguage {
+    line-height: 0;
+}
 
 @media only screen and (max-width:768px) {
     .MobileMenu {
@@ -53,7 +67,7 @@
     .languages {
         display: flex;
         justify-content: space-evenly;
-        margin-bottom: 20%;
+        margin-bottom: 40%;
     }
 
     .menu {

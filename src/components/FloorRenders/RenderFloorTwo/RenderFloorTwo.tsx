@@ -1,12 +1,13 @@
 import React, {Dispatch, FC, SetStateAction} from 'react';
 import styles from "../RenderFloorOne/RenderFloorOne.module.css";
 import {Apartment} from "../../../interfaces/Apartments";
+import {FloorData} from "../../../interfaces/GeneralInterfaces";
 
 interface RenderFloorTwoProps {
     setFloorPlanSectionVisible: Dispatch<SetStateAction<boolean>>
     setFlatSectionVisible: Dispatch<SetStateAction<boolean>>
-    apartmentsOfCurrentFloor: Apartment[]
     setSelectedApartment: Dispatch<SetStateAction<Apartment | undefined>>
+    floorData: FloorData
 }
 
 const RenderFloorTwo: FC<RenderFloorTwoProps> = (props) => {
@@ -14,16 +15,16 @@ const RenderFloorTwo: FC<RenderFloorTwoProps> = (props) => {
         if(isApartmentSold(flatNumber)) return;
         props.setFlatSectionVisible(true)
         props.setFloorPlanSectionVisible(false)
-        props.setSelectedApartment(props.apartmentsOfCurrentFloor.find((apartment: Apartment) => apartment.apartmentNumber === flatNumber))
+        props.setSelectedApartment(props.floorData.apartmentsOfCurrentFloor.find((apartment: Apartment) => apartment.apartmentNumber === flatNumber))
     }
 
     function isApartmentSold(flatNumber: number) {
-        if (props.apartmentsOfCurrentFloor === undefined) {
+        if (props.floorData.apartmentsOfCurrentFloor === undefined) {
             setTimeout(() => {
-                isApartmentSold(flatNumber)
+                return isApartmentSold(flatNumber)
             }, 1000);
         } else {
-            return props.apartmentsOfCurrentFloor[flatNumber - 1].sold
+            return props.floorData.apartmentsOfCurrentFloor[flatNumber - 1].sold
         }
     }
 

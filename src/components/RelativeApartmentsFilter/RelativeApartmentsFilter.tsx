@@ -393,13 +393,6 @@ const RelativeApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
                 </button>
                 <button className={`${styles.ButtonBlue} ${styles.Button}`} onClick={() => {
                     setErrorMessage(undefined)
-                    setSelectedAreas((prevState) => {
-                        let newState = [...prevState];
-                        newState.forEach((areaState, index) => {
-                            newState[index] = false;
-                        })
-                        return newState;
-                    })
                     searchForApartmentsBasedOnFilter();
                     if (!errorMessage) {
                         props.setFilterVisible(false)

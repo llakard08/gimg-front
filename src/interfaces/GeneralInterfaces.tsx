@@ -18,4 +18,10 @@ export interface NotSelectedSituationsData {
     specificSearchFlag: boolean
 }
 
+export interface FloorData {
+    apartmentsOfCurrentFloor: Apartment[]
+    availableApartments: number
+    totalApartments: number
+}
+
 
