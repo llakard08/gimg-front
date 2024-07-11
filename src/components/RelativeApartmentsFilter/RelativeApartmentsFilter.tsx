@@ -32,6 +32,8 @@ const RelativeApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
     const [selectedAreas, setSelectedAreas] = useState<boolean[]>([]);
     const [selectedApartmentType, setSelectedApartmentType] = useState<string | undefined>(undefined);
     const [errorMessage, setErrorMessage] = useState<string | undefined>(undefined)
+    const [searchErrorRaised, setSearchErrorRaised] = useState<boolean>(false);
+
     // Initialize state for the range slider values
     const [rangeValues, setRangeValues] = useState([0, 100]);
     const {t} = useTranslation("global")
@@ -205,7 +207,8 @@ const RelativeApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
             result = performSpecificSearch(building)
         }
         if (result.length === 0) {
-            setErrorMessage('Apartments by your description do not exist')
+            setSearchErrorRaised(true)
+            setErrorMessage((prevState) => 'Apartments not found')
         } else {
             let lastSearchInput: LastSearchInputs = {
                 selectedType: 'standard',
@@ -219,6 +222,8 @@ const RelativeApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
             }
             localStorage.setItem("lastSearchInput", JSON.stringify(lastSearchInput))
             props.setSearchedApartments(result)
+            setSearchErrorRaised(false)
+            setErrorMessage('')
         }
     }
 

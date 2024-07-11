@@ -205,6 +205,12 @@
     cursor: pointer;
 }
 
+.errorWrapper {
+    text-align: center;
+    color: #f7554e;
+    margin-bottom: 5px;
+}
+
 /*
 Laptop L
 */

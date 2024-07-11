@@ -60,7 +60,6 @@
 }
 
 
-
 .content img {
     width: 12px;
     height: auto;
@@ -184,7 +183,8 @@
     width: 100%;
 }
 
-.slider {}
+.slider {
+}
 
 .filterButtons {
     display: flex;
@@ -208,6 +208,12 @@
 
 .clear:hover {
     cursor: pointer;
+}
+
+.errorWrapper {
+    text-align: center;
+    color: #f7554e;
+    margin-bottom: 5px;
 }
 
 /*

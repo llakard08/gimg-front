@@ -33,6 +33,7 @@ const ApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
     const [selectedAreas, setSelectedAreas] = useState<boolean[]>([]);
     const [selectedApartmentType, setSelectedApartmentType] = useState<string | undefined>(undefined);
     const [errorMessage, setErrorMessage] = useState<string | undefined>(undefined)
+    const [searchErrorRaised, setSearchErrorRaised] = useState<boolean>(false);
     // Initialize state for the range slider values
     const [rangeValues, setRangeValues] = useState([0, 100]);
     const {t} = useTranslation("global")
@@ -208,7 +209,8 @@ const ApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
             result = performSpecificSearch(building)
         }
         if (result.length === 0) {
-            setErrorMessage((prevState) => 'Apartments by your description do not exist')
+            setSearchErrorRaised(true)
+            setErrorMessage((prevState) => 'Apartments not found')
         } else {
             let lastSearchInput: LastSearchInputs = {
                 selectedType: standardSelected ? 'standard' : 'duplex',
@@ -224,10 +226,12 @@ const ApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
             props.setSearchedApartments(result)
             props.setFilterVisible(false)
             props.setApartmentsVisible(true);
+            setSearchErrorRaised(false)
+            setErrorMessage('')
         }
     }
 
-    function getAvailableApartmentAreasForSelectedFloors(){
+    function getAvailableApartmentAreasForSelectedFloors() {
         const availableStandardApartmentAreasSet: Set<number> = new Set();
         const availableDuplexApartmentAreasSet: Set<number> = new Set();
         const building = buildingConfig as Building;
@@ -420,9 +424,9 @@ const ApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
                     </div>
                 </div>
             </div>
-            {/*{errorMessage && <div>{errorMessage}</div>*/}
+            {searchErrorRaised && <div className={styles.errorWrapper}>{errorMessage}</div>
 
-            {/*}*/}
+            }
             <div className={styles.filterButtons}>
                 <button className={`${styles.clear}`} onClick={() => {
                     clearSearchInputs();
