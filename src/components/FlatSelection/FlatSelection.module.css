@@ -396,6 +396,10 @@ button {
     white-space: nowrap;
 }
 
+.wholeAreaNoWrap {
+    white-space: nowrap;
+}
+
 .phoneNumber {
     white-space: nowrap;
     font-size: 16px;
@@ -553,6 +557,10 @@ Laptop S
     }
 
     .nowrap {
+        font-size: 0.8rem;
+    }
+
+    .wholeAreaNoWrap {
         font-size: 0.8rem;
     }
 

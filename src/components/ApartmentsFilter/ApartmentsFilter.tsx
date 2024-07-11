@@ -55,16 +55,41 @@ const ApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
         if (item !== undefined && item !== null) {
             handleLanguageChange(item)
         }
+        reloadLatestData()
+    }, [])
+
+    function reloadLatestSearchType(): string | undefined {
+        const lastSearchInputJson = localStorage.getItem("lastSearchInput");
+        if (lastSearchInputJson !== undefined && lastSearchInputJson !== null) {
+            const lastSearchInput: LastSearchInputs = JSON.parse(lastSearchInputJson)
+            return lastSearchInput.selectedType;
+        }
+        return undefined;
+    }
+
+    function reloadLatestData() {
         const lastSearchInputJson = localStorage.getItem("lastSearchInput");
         if (lastSearchInputJson !== undefined && lastSearchInputJson !== null) {
             const lastSearchInput: LastSearchInputs = JSON.parse(lastSearchInputJson)
             setSelectedAreas(lastSearchInput.selectedAreas)
             setSelectedFloorsQuantity(lastSearchInput.selectedFloorsQuantity)
             setSelectedFloors(lastSearchInput.selectedFloors)
-            lastSearchInput.selectedType === 'standard' ? setStandardSelected(true) : setDuplexSelected(true);
+            setStandardSelected((prevValue) => {
+                const result = lastSearchInput.selectedType === 'standard';
+                if (result) {
+                    setApartmentAreasToDisplay(standardApartmentAreas)
+                }
+                return result;
+            })
+            setDuplexSelected((prevValue) => {
+                const result = lastSearchInput.selectedType === 'duplex';
+                if (result) {
+                    setApartmentAreasToDisplay(duplexApartmentAreas)
+                }
+                return result;
+            })
         }
-    }, [])
-
+    }
 
     function clearSearchInputs() {
         setSelectedAreas((prevState) => {
@@ -109,8 +134,17 @@ const ApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
         const areasNotSelected = areasAreNotSelected();
         const floorsNotSelected = floorsAreNotSelected();
         if (areasNotSelected && floorsNotSelected) {
-            result.specificSearchFlag = false;
-            result.apartments = performAllApartmentsSearch(building);
+            if (standardSelected) {
+                result.specificSearchFlag = false;
+                result.apartments = performApartmentsSearchOnlyByType(building, 'standard')
+            } else if (duplexSelected) {
+                result.specificSearchFlag = false;
+                result.apartments = performApartmentsSearchOnlyByType(building, 'duplex')
+            } else {
+                result.specificSearchFlag = false;
+                result.apartments = performAllApartmentsSearch(building);
+            }
+            console.log(result.apartments)
         } else if (!areasNotSelected && floorsNotSelected) {
             result.specificSearchFlag = false;
             result.apartments = performOnlySpecificAreasSearch(building)
@@ -121,6 +155,22 @@ const ApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
             result.specificSearchFlag = true;
         }
         return result;
+    }
+
+    function performApartmentsSearchOnlyByType(building: Building, type: string): Apartment[] {
+        let resultApartments: Apartment[] = []
+        building.floors.forEach((floor) => {
+            floor.apartments.forEach((apartment) => {
+                if (!apartment.sold) {
+                    if (apartment.type === type) {
+                        if (apartment.price >= rangeValues[0] && apartment.price <= rangeValues[1]) {
+                            resultApartments.push(apartment);
+                        }
+                    }
+                }
+            })
+        })
+        return resultApartments;
     }
 
     function performAllApartmentsSearch(building: Building): Apartment[] {
@@ -231,38 +281,6 @@ const ApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
         }
     }
 
-    function getAvailableApartmentAreasForSelectedFloors() {
-        const availableStandardApartmentAreasSet: Set<number> = new Set();
-        const availableDuplexApartmentAreasSet: Set<number> = new Set();
-        const building = buildingConfig as Building;
-        building.floors.forEach((floor) => {
-            if (selectedFloors[floor.floorNumber - 5]) {
-                floor.apartments.forEach((apartment) => {
-                    if (!apartment.sold) {
-                        if (apartment.type === 'standard') {
-                            availableStandardApartmentAreasSet.add(Number((apartment.apartmentArea + apartment.balcony).toFixed(2)))
-                        }
-                        if (apartment.type === 'duplex') {
-                            availableDuplexApartmentAreasSet.add(Number((apartment.apartmentArea + apartment.balcony
-                                + (apartment.linkedApartment ? (apartment.linkedApartment?.apartmentArea + apartment.linkedApartment?.balcony) : 0)).toFixed(2)))
-                        }
-                    }
-                })
-            }
-        })
-
-        setStandardApartmentAreas((prevState) => {
-            let availableStandardApartmentAreas: number[] = Array.from(availableStandardApartmentAreasSet)
-            availableStandardApartmentAreas = availableStandardApartmentAreas.sort((a, b) => a - b);
-            const clone = [...availableStandardApartmentAreas]
-            setApartmentAreasToDisplay(clone)
-            return clone;
-        })
-        const availableDuplexApartmentAreas: number[] = Array.from(availableDuplexApartmentAreasSet)
-        availableDuplexApartmentAreas.sort((a, b) => a - b);
-        setDuplexApartmentAreas(availableDuplexApartmentAreas)
-    }
-
     function getAvailableApartmentAreas() {
         const availableStandardApartmentAreasSet: Set<number> = new Set();
         const availableDuplexApartmentAreasSet: Set<number> = new Set();
@@ -280,17 +298,25 @@ const ApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
                 }
             })
         })
+        let availableStandardApartmentAreas: number[] = Array.from(availableStandardApartmentAreasSet)
+        availableStandardApartmentAreas = availableStandardApartmentAreas.sort((a, b) => a - b);
+        setStandardApartmentAreas(() => {
+            const reloadLatestSearchTypeData = reloadLatestSearchType();
+            if (reloadLatestSearchTypeData && reloadLatestSearchTypeData === 'standard') {
+                setApartmentAreasToDisplay(availableStandardApartmentAreas);
+            }
+            return availableStandardApartmentAreas
+        });
 
-        setStandardApartmentAreas((prevState) => {
-            let availableStandardApartmentAreas: number[] = Array.from(availableStandardApartmentAreasSet)
-            availableStandardApartmentAreas = availableStandardApartmentAreas.sort((a, b) => a - b);
-            const clone = [...availableStandardApartmentAreas]
-            setApartmentAreasToDisplay(clone)
-            return clone;
-        })
         const availableDuplexApartmentAreas: number[] = Array.from(availableDuplexApartmentAreasSet)
         availableDuplexApartmentAreas.sort((a, b) => a - b);
-        setDuplexApartmentAreas(availableDuplexApartmentAreas)
+        setDuplexApartmentAreas(() => {
+            const reloadLatestSearchTypeData = reloadLatestSearchType();
+            if (reloadLatestSearchTypeData && reloadLatestSearchTypeData === 'duplex') {
+                setApartmentAreasToDisplay(availableDuplexApartmentAreas);
+            }
+            return availableDuplexApartmentAreas
+        })
     }
 
     return (<div className={styles.ApartmentsFilter}>

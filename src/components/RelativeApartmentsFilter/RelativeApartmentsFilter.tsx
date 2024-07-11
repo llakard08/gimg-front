@@ -54,29 +54,41 @@ const RelativeApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
         if (item !== undefined && item !== null) {
             handleLanguageChange(item)
         }
+        reloadLatestData()
+    }, [])
+
+    function reloadLatestSearchType(): string | undefined {
         const lastSearchInputJson = localStorage.getItem("lastSearchInput");
         if (lastSearchInputJson !== undefined && lastSearchInputJson !== null) {
             const lastSearchInput: LastSearchInputs = JSON.parse(lastSearchInputJson)
+            return lastSearchInput.selectedType;
+        }
+        return undefined;
+    }
+
+    function reloadLatestData() {
+        const lastSearchInputJson = localStorage.getItem("lastSearchInput");
+        if (lastSearchInputJson !== undefined && lastSearchInputJson !== null) {
+            const lastSearchInput: LastSearchInputs = JSON.parse(lastSearchInputJson)
+            setSelectedAreas(lastSearchInput.selectedAreas)
+            setSelectedFloorsQuantity(lastSearchInput.selectedFloorsQuantity)
+            setSelectedFloors(lastSearchInput.selectedFloors)
             setStandardSelected((prevValue) => {
                 const result = lastSearchInput.selectedType === 'standard';
-                if(result){
+                if (result) {
                     setApartmentAreasToDisplay(standardApartmentAreas)
                 }
                 return result;
             })
             setDuplexSelected((prevValue) => {
                 const result = lastSearchInput.selectedType === 'duplex';
-                if(result){
+                if (result) {
                     setApartmentAreasToDisplay(duplexApartmentAreas)
                 }
                 return result;
             })
-            setSelectedAreas(lastSearchInput.selectedAreas)
-            setSelectedFloorsQuantity(lastSearchInput.selectedFloorsQuantity)
-            setSelectedFloors(lastSearchInput.selectedFloors)
-            lastSearchInput.selectedType === 'standard' ? setStandardSelected(true) : setDuplexSelected(true);
         }
-    }, [])
+    }
 
     function clearSearchInputs() {
         setSelectedAreas((prevState) => {
@@ -122,8 +134,16 @@ const RelativeApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
         const areasNotSelected = areasAreNotSelected();
         const floorsNotSelected = floorsAreNotSelected();
         if (areasNotSelected && floorsNotSelected) {
-            result.specificSearchFlag = false;
-            result.apartments = performAllApartmentsSearch(building);
+            if (standardSelected) {
+                result.specificSearchFlag = false;
+                result.apartments = performApartmentsSearchOnlyByType(building, 'standard')
+            } else if (duplexSelected) {
+                result.specificSearchFlag = false;
+                result.apartments = performApartmentsSearchOnlyByType(building, 'duplex')
+            } else {
+                result.specificSearchFlag = false;
+                result.apartments = performAllApartmentsSearch(building);
+            }
         } else if (!areasNotSelected && floorsNotSelected) {
             result.specificSearchFlag = false;
             result.apartments = performOnlySpecificAreasSearch(building)
@@ -134,6 +154,22 @@ const RelativeApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
             result.specificSearchFlag = true;
         }
         return result;
+    }
+
+    function performApartmentsSearchOnlyByType(building: Building, type: string): Apartment[] {
+        let resultApartments: Apartment[] = []
+        building.floors.forEach((floor) => {
+            floor.apartments.forEach((apartment) => {
+                if (!apartment.sold) {
+                    if (apartment.type === type) {
+                        if (apartment.price >= rangeValues[0] && apartment.price <= rangeValues[1]) {
+                            resultApartments.push(apartment);
+                        }
+                    }
+                }
+            })
+        })
+        return resultApartments;
     }
 
     function performAllApartmentsSearch(building: Building): Apartment[] {
@@ -225,7 +261,7 @@ const RelativeApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
             setErrorMessage((prevState) => 'Apartments not found')
         } else {
             let lastSearchInput: LastSearchInputs = {
-                selectedType: 'standard',
+                selectedType: standardSelected ? 'standard' : 'duplex',
                 selectedFloors: selectedFloors,
                 selectedFloorsQuantity: selectedFloorsQuantity,
                 selectedAreas: selectedAreas,
@@ -258,17 +294,25 @@ const RelativeApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
                 }
             })
         })
+        let availableStandardApartmentAreas: number[] = Array.from(availableStandardApartmentAreasSet)
+        availableStandardApartmentAreas = availableStandardApartmentAreas.sort((a, b) => a - b);
+        setStandardApartmentAreas(() => {
+            const reloadLatestSearchTypeData = reloadLatestSearchType();
+            if (reloadLatestSearchTypeData && reloadLatestSearchTypeData === 'standard') {
+                setApartmentAreasToDisplay(availableStandardApartmentAreas);
+            }
+            return availableStandardApartmentAreas
+        });
 
-        setStandardApartmentAreas((prevState) => {
-            let availableStandardApartmentAreas: number[] = Array.from(availableStandardApartmentAreasSet)
-            availableStandardApartmentAreas = availableStandardApartmentAreas.sort((a, b) => a - b);
-            const clone = [...availableStandardApartmentAreas]
-            setApartmentAreasToDisplay(clone)
-            return clone;
-        })
         const availableDuplexApartmentAreas: number[] = Array.from(availableDuplexApartmentAreasSet)
         availableDuplexApartmentAreas.sort((a, b) => a - b);
-        setDuplexApartmentAreas(availableDuplexApartmentAreas)
+        setDuplexApartmentAreas(() => {
+            const reloadLatestSearchTypeData = reloadLatestSearchType();
+            if (reloadLatestSearchTypeData && reloadLatestSearchTypeData === 'duplex') {
+                setApartmentAreasToDisplay(availableDuplexApartmentAreas);
+            }
+            return availableDuplexApartmentAreas
+        })
     }
 
     return (<div className={styles.ApartmentsFilter}>
