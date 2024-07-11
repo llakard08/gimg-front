@@ -88,7 +88,7 @@ const ApartmentSelection: FC<ApartmentSelectionProps> = () => {
             </div>
 
             <div className={styles.buildingWrapper}>
-                <svg width="1700" height="776" viewBox="0 0 1700 776" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="90%" height="120%" viewBox="0 0 1700 776" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
                     <path onMouseDown={() => {
                         processCurrentFloorSelection(11);
                     }} className={styles.cover}

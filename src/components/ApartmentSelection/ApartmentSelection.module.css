@@ -162,8 +162,7 @@ Laptop L
 */
 @media only screen and (max-width: 1440px) {
     .buildingWrapper {
-        top: 25vh;
-        width: 80%;
+        top: 35vh;
     }
 
     .homeContainer h3 {

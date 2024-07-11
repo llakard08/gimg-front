@@ -387,9 +387,9 @@ const RelativeApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
                     </div>
                 </div>
             </div>
-            {/*{errorMessage && <div>{errorMessage}</div>*/}
+            {searchErrorRaised && <div className={styles.errorWrapper}>{errorMessage}</div>
 
-            {/*}*/}
+            }
             <div className={styles.filterButtons}>
                 <button className={`${styles.clear}`} onClick={() => {
                     clearSearchInputs()
