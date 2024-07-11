@@ -1,7 +1,7 @@
 import React, {Dispatch, FC, SetStateAction} from 'react';
 import styles from "../RenderFloorFive/RenderFloorFive.module.css";
 import {Apartment} from "../../../interfaces/Apartments";
-import {FloorData} from "../../../interfaces/GeneralInterfaces";
+import {FlatAvailabilityCondition, FloorData} from "../../../interfaces/GeneralInterfaces";
 
 interface RenderFloorSevenProps {
     setFloorPlanSectionVisible: Dispatch<SetStateAction<boolean>>
@@ -12,21 +12,30 @@ interface RenderFloorSevenProps {
 
 const RenderFloorSeven: FC<RenderFloorSevenProps> = (props) => {
     function displaySelectedFlat(flatNumber: number, props: RenderFloorSevenProps) {
-        if(isApartmentSold(flatNumber)) return;
+        if (getFloorAvailabilityCondition(flatNumber).sold) return;
         props.setFlatSectionVisible(true)
         props.setFloorPlanSectionVisible(false)
         props.setSelectedApartment(props.floorData.apartmentsOfCurrentFloor.find((apartment: Apartment) => apartment.apartmentNumber === flatNumber))
     }
 
-    function isApartmentSold(flatNumber: number) {
+    function getFloorAvailabilityCondition(flatNumber: number): FlatAvailabilityCondition {
         if (props.floorData.apartmentsOfCurrentFloor === undefined) {
             setTimeout(() => {
-                return isApartmentSold(flatNumber)
+                return getFloorAvailabilityCondition(flatNumber)
             }, 1000);
-        } else {
-            return props.floorData.apartmentsOfCurrentFloor[flatNumber - 1].sold
         }
+        const result: FlatAvailabilityCondition = {
+            sold: props.floorData.apartmentsOfCurrentFloor[flatNumber - 1].sold,
+            reserved: props.floorData.apartmentsOfCurrentFloor[flatNumber - 1].reserved
+        }
+        return result
     }
+
+    function getFillColorBasedOnCondition(floorNumber: number, colorAvailable : string): string {
+        const floorAvailabilityCondition = getFloorAvailabilityCondition(floorNumber);
+        return floorAvailabilityCondition.sold ? "#640303" : (floorAvailabilityCondition.reserved ? "#967c00" : colorAvailable);
+    }
+
 
     return (<>
             <svg width="1162" height="342" viewBox="0 0 1162 342" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -41,25 +50,25 @@ const RenderFloorSeven: FC<RenderFloorSevenProps> = (props) => {
                           displaySelectedFlat(4, props)
                       }}
                       d="M553 220L568.5 37.5C628.108 38.5196 772.504 92.141 809 111.5L781 190L754.5 180L726 261L671 244.5L613 229L596.5 225.5L553 220Z"
-                      fill={isApartmentSold(4) ? "#640303" : "#10324C"}/>
+                      fill={getFillColorBasedOnCondition(4,"#10324C")}/>
                 <path className={styles.flatCover}
                       onClick={() => {
                           displaySelectedFlat(3, props)
                       }}
                       d="M405 216.003L383 29.5061C432.5 25.0092 521.133 31.9565 569 37.5031V39.0031L553 219.503L516 215.003H496.5L478.5 214.503L460 215.003L405 216.003Z"
-                      fill={isApartmentSold(3) ? "#640303" : "#142837"}/>
+                      fill={getFillColorBasedOnCondition(3,"#142837")}/>
                 <path className={styles.flatCover}
                       onClick={() => {
                           displaySelectedFlat(2, props)
                       }}
                       d="M218.5 62L220 38.5C245.788 39.1068 285.566 37.1836 322 35C347.5 32 368.099 30.5844 383.5 30L386 54L393.5 114L398 153.5L405 217L300.5 236.5L288 240.5L246.5 255L238 212L222.5 135L221 123L218.5 62Z"
-                      fill={isApartmentSold(2) ? "#640303" : "#10324C"}/>
+                      fill={getFillColorBasedOnCondition(2,"#10324C")}/>
                 <path className={styles.flatCover}
                       onClick={() => {
                           displaySelectedFlat(1, props)
                       }}
                       d="M95 167L119 25C154.5 31 173.5 32.5 219.5 38.5L218 62L221 126.5L234 191.5L246.5 255L194 274L129 287L130.5 179.5L95 167Z"
-                      fill={isApartmentSold(1) ? "#640303" : "#142837"}/>
+                      fill={getFillColorBasedOnCondition(1,"#142837")}/>
                 <path d="M111.5 173L95.5 167L119 24.5" stroke="#6A8090" strokeWidth="3"/>
                 <path d="M126 177.5L130.5 179.5L128.5 287.5L194.5 273.5L246.5 255L222.5 134L221 126.5L218.5 61L220 38"
                       stroke="#6A8090" strokeWidth="3"/>

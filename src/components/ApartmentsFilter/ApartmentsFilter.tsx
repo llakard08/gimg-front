@@ -227,6 +227,38 @@ const ApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
         }
     }
 
+    function getAvailableApartmentAreasForSelectedFloors(){
+        const availableStandardApartmentAreasSet: Set<number> = new Set();
+        const availableDuplexApartmentAreasSet: Set<number> = new Set();
+        const building = buildingConfig as Building;
+        building.floors.forEach((floor) => {
+            if (selectedFloors[floor.floorNumber - 5]) {
+                floor.apartments.forEach((apartment) => {
+                    if (!apartment.sold) {
+                        if (apartment.type === 'standard') {
+                            availableStandardApartmentAreasSet.add(Number((apartment.apartmentArea + apartment.balcony).toFixed(2)))
+                        }
+                        if (apartment.type === 'duplex') {
+                            availableDuplexApartmentAreasSet.add(Number((apartment.apartmentArea + apartment.balcony
+                                + (apartment.linkedApartment ? (apartment.linkedApartment?.apartmentArea + apartment.linkedApartment?.balcony) : 0)).toFixed(2)))
+                        }
+                    }
+                })
+            }
+        })
+
+        setStandardApartmentAreas((prevState) => {
+            let availableStandardApartmentAreas: number[] = Array.from(availableStandardApartmentAreasSet)
+            availableStandardApartmentAreas = availableStandardApartmentAreas.sort((a, b) => a - b);
+            const clone = [...availableStandardApartmentAreas]
+            setApartmentAreasToDisplay(clone)
+            return clone;
+        })
+        const availableDuplexApartmentAreas: number[] = Array.from(availableDuplexApartmentAreasSet)
+        availableDuplexApartmentAreas.sort((a, b) => a - b);
+        setDuplexApartmentAreas(availableDuplexApartmentAreas)
+    }
+
     function getAvailableApartmentAreas() {
         const availableStandardApartmentAreasSet: Set<number> = new Set();
         const availableDuplexApartmentAreasSet: Set<number> = new Set();
@@ -310,7 +342,7 @@ const ApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
                             thumbClassName="thumb"
                             trackClassName="track"
                             min={0}
-                            max={4000}
+                            max={buildingConfig.maxPrice}
                             value={rangeValues}
                             onChange={handleSliderChange}
 
@@ -353,6 +385,7 @@ const ApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
                                                         }
                                                     });
                                                     setSelectedFloorsQuantity(selectedQuantity)
+                                                    // getAvailableApartmentAreasForSelectedFloors()
                                                     return newStates;
                                                 })
                                             }}>{index + 5}

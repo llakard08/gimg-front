@@ -1,7 +1,7 @@
 import React, {Dispatch, FC, SetStateAction} from 'react';
 import styles from './RenderFloorSix.module.css';
 import {Apartment} from "../../../interfaces/Apartments";
-import {FloorData} from "../../../interfaces/GeneralInterfaces";
+import {FlatAvailabilityCondition, FloorData} from "../../../interfaces/GeneralInterfaces";
 
 interface RenderFloorSixProps {
     setFloorPlanSectionVisible: Dispatch<SetStateAction<boolean>>
@@ -12,21 +12,30 @@ interface RenderFloorSixProps {
 
 const RenderFloorSix: FC<RenderFloorSixProps> = (props) => {
     function displaySelectedFlat(flatNumber: number, props: RenderFloorSixProps) {
-        if(isApartmentSold(flatNumber)) return;
+        if (getFloorAvailabilityCondition(flatNumber).sold) return;
         props.setFlatSectionVisible(true)
         props.setFloorPlanSectionVisible(false)
         props.setSelectedApartment(props.floorData.apartmentsOfCurrentFloor.find((apartment: Apartment) => apartment.apartmentNumber === flatNumber))
     }
 
-    function isApartmentSold(flatNumber: number) {
+    function getFloorAvailabilityCondition(flatNumber: number): FlatAvailabilityCondition {
         if (props.floorData.apartmentsOfCurrentFloor === undefined) {
             setTimeout(() => {
-                return isApartmentSold(flatNumber)
+                return getFloorAvailabilityCondition(flatNumber)
             }, 1000);
-        } else {
-            return props.floorData.apartmentsOfCurrentFloor[flatNumber - 1]?.sold
         }
+        const result: FlatAvailabilityCondition = {
+            sold: props.floorData.apartmentsOfCurrentFloor[flatNumber - 1].sold,
+            reserved: props.floorData.apartmentsOfCurrentFloor[flatNumber - 1].reserved
+        }
+        return result
     }
+
+    function getFillColorBasedOnCondition(floorNumber: number, colorAvailable : string): string {
+        const floorAvailabilityCondition = getFloorAvailabilityCondition(floorNumber);
+        return floorAvailabilityCondition.sold ? "#640303" : (floorAvailabilityCondition.reserved ? "#967c00" : colorAvailable);
+    }
+
 
     return (<>
             <svg width="1162" height="342" viewBox="0 0 1162 342" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -42,7 +51,7 @@ const RenderFloorSix: FC<RenderFloorSixProps> = (props) => {
                       }}
                       fillRule="evenodd" clipRule="evenodd"
                       d="M1080.73 275.597L1061 278.003L1044.5 247.503L1003 258.503L893.6 224.5L892 303.456L836.5 294.456L831 325.956C831 325.956 945 362.456 1089 298.956L1080.73 275.597Z"
-                      fill={isApartmentSold(8) ? "#640303" : "#142837"}/>
+                      fill={getFillColorBasedOnCondition(8,"#142837")}/>
                 <path
                     d="M895 156.5L893.333 204.5M1081 275.5L1089.5 299.5C988.356 339.26 931.833 347.796 831.5 326.5L836.5 295.5L892.5 303.5L893.333 254.5V244.5M1081 275.5C1109.55 261.867 1127.41 250.341 1160.5 225.5M1081 275.5L1061.5 278.5L1046 247.5M1019 100.5L982 116.5L986 122L990.5 145"
                     stroke="#6A8090" strokeWidth="3"/>
@@ -58,37 +67,37 @@ const RenderFloorSix: FC<RenderFloorSixProps> = (props) => {
                           displaySelectedFlat(6, props)
                       }}
                       d="M650.5 238.5L691 65.5C736 80.5 760 87.5 808 111.5L781.5 190L754.5 179.5L726.5 261.5L650.5 238.5Z"
-                      fill={isApartmentSold(6) ? "#640303" : "#10324C"}/>
+                      fill={getFillColorBasedOnCondition(6,"#10324C")}/>
                 <path className={styles.flatCover}
                       onClick={() => {
                           displaySelectedFlat(5, props)
                       }}
                       d="M553 220L568.5 37.5C618.894 45.4199 645.602 51.9192 690.5 65L651.5 238L613 229L597 225L553 220Z"
-                      fill={isApartmentSold(5) ? "#640303" : "#142837"}/>
+                      fill={getFillColorBasedOnCondition(5,"#142837")}/>
                 <path className={styles.flatCover}
                       onClick={() => {
                           displaySelectedFlat(4, props)
                       }}
                       d="M448.5 215L447 27C494.396 29.5783 521.133 31.9534 569 37.5V39L553 219.5L516 215H496.5L478.5 214.5L460 215H448.5Z"
-                      fill={isApartmentSold(4) ? "#640303" : "#10324C"}/>
+                      fill={getFillColorBasedOnCondition(4,"#10324C")}/>
                 <path className={styles.flatCover}
                       onClick={() => {
                           displaySelectedFlat(3, props)
                       }}
                       d="M339.5 162L322.5 34.5C370.286 29.4046 397.529 27.7613 447 27.5L447.5 144.5L448.5 216L402.5 217L350.5 226.5L339.5 162Z"
-                      fill={isApartmentSold(3) ? "#640303" : "#142837"}/>
+                      fill={getFillColorBasedOnCondition(3,"#142837")}/>
                 <path className={styles.flatCover}
                       onClick={() => {
                           displaySelectedFlat(2, props)
                       }}
                       d="M218.5 62L220 38.5C262.5 39.5 283.353 41.1559 322.5 34L326 57.5L334.5 122.5L339.5 161L351 226.5L300.5 236.5L288 240.5L246.5 255L238 212L222.5 135L221 123L218.5 62Z"
-                      fill={isApartmentSold(2) ? "#640303" : "#10324C"}/>
+                      fill={getFillColorBasedOnCondition(2,"#10324C")}/>
                 <path className={styles.flatCover}
                       onClick={() => {
                           displaySelectedFlat(1, props)
                       }}
                       d="M95 167L119 25C154.5 31 173.5 32.5 219.5 38.5L218 62L221 126.5L234 191.5L246.5 255L194 274L129 287L130.5 179.5L95 167Z"
-                      fill={isApartmentSold(1) ? "#640303" : "#142837"}/>
+                      fill={getFillColorBasedOnCondition(1,"#142837")}/>
                 <path d="M111.5 173L95.5 167L119 24.5" stroke="#6A8090" strokeWidth="3"/>
                 <path d="M126 177.5L130.5 179.5L128.5 287.5L194.5 273.5L246.5 255L222.5 134L221 126.5L218.5 61L220 38"
                       stroke="#6A8090" strokeWidth="3"/>
@@ -272,7 +281,7 @@ const RenderFloorSix: FC<RenderFloorSixProps> = (props) => {
                           displaySelectedFlat(7, props)
                       }}
                       d="M986.5 121C935.582 135.482 907.833 137.185 859 127.5L856 150L896 155.5L893.5 224L1005 258.5L1047.5 248L1061.5 277.5L1081.5 275C1111.26 260.597 1129.59 248.707 1160.5 225.5L1018.5 100.5L982.5 116L986.5 121Z"
-                      fill={isApartmentSold(7) ? "#640303" : "#10324C"}/>
+                      fill={getFillColorBasedOnCondition(7,"#10324C")}/>
                 <path
                     d="M895.503 156L893.836 204M1161 225C1127.91 249.841 1110.05 261.367 1081.5 275L1062 278L1046.5 247M1019.5 100L982.503 116L986.503 121.5L991.003 144.5"
                     stroke="#6A8090" strokeWidth="3"/>

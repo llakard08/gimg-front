@@ -58,7 +58,7 @@ const Footer: FC<FooterProps> = () => {
                             <li><Link activeClass='active' smooth={true} to='about-project'
                                       offset={-100}>{t("header.navigation.aboutUs")}</Link></li>
                             <li><NavLink to={"/selection"}>{t("header.navigation.project")}</NavLink></li>
-                            <li><Link activeClass='active' smooth={true} to='contact'
+                            <li className={styles.contact}><Link activeClass='active' smooth={true} to='contact'
                                       offset={0}>{t("header.navigation.contact")}</Link>
                             </li>
                         </ul>

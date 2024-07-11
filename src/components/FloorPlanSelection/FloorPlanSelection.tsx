@@ -149,21 +149,25 @@ const FloorPlanSelection: FC<FloorPlanSelectionProps> = (props) => {
                 </div>
 
                 <div className={styles.floorButtons}>
-
-                    <button className={`${styles.primaryButton} ${styles.withIcon}`}
-                            disabled={props.selectedFloorNumber <= 5}
-                            onClick={() => props.setSelectedFloorNumber(props.selectedFloorNumber - 1)}>
+                    {props.selectedFloorNumber > 5 && <button className={`${styles.primaryButton} ${styles.withIcon} ${styles.leftButton}`}
+                             disabled={props.selectedFloorNumber <= 5}
+                             onClick={() => props.setSelectedFloorNumber(props.selectedFloorNumber - 1)}>
                         <img src={arrowHeadLeft} alt=""/>
                         <h4 className={styles.nowrap}>{props.selectedFloorNumber <= 5 ? props.selectedFloorNumber : props.selectedFloorNumber - 1} {t("floor.label")}</h4>
                     </button>
+                    }
                     <hr className={styles.floorLine}/>
 
-                    <button className={`${styles.primaryButton} ${styles.withIcon}`}
+                    {props.selectedFloorNumber < 12 && <button className={`${styles.primaryButton} ${styles.withIcon} ${styles.rightButton}`}
                             disabled={props.selectedFloorNumber >= 12}
                             onClick={() => props.setSelectedFloorNumber(props.selectedFloorNumber + 1)}>
                         <h4 className={styles.nowrap}>{props.selectedFloorNumber >= 12 ? props.selectedFloorNumber : props.selectedFloorNumber + 1} {t("floor.label")}</h4>
                         <img src={arrowHeadRight} alt=""/>
                     </button>
+                    }
+                </div>
+                <div className={styles.chooseApartmentLabel}>
+                    <h4 className={styles.nowrap}>{t("floor.plan.selection.header")}</h4>
                 </div>
                 <div className={styles.floorPlan}>
                     {

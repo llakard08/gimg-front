@@ -24,4 +24,9 @@ export interface FloorData {
     totalApartments: number
 }
 
+export interface FlatAvailabilityCondition {
+    sold: boolean,
+    reserved: boolean
+}
+
 

@@ -195,10 +195,11 @@ button {
 }
 
 .floorButtons {
-    display: flex;
-    justify-content: space-between;
+    display: flow;
     align-items: center;
+    flex-direction: row;
     margin: 70px 0 70px 0;
+    height: 10%;
 }
 
 .floorButtons .primaryButton {
@@ -249,6 +250,19 @@ button {
 .flatCover:hover {
     cursor: pointer;
     opacity: 1;
+}
+
+.chooseApartmentLabel {
+    text-align: center;
+    display: none;
+}
+
+.rightButton {
+    float: right;
+}
+
+.leftButton {
+    float: left;
 }
 
 /*
@@ -307,11 +321,13 @@ Laptop S
 
 @media only screen and (max-width: 768px) {
     .floorButtons {
-        margin: 27px 0 145px 0;
+        margin: 27px 0 27px 0;
     }
 
     .floorPlan {
         rotate: 90deg;
+        margin-top: 20%;
+        height: 40vh;
     }
 
     .floorPlanSection {
@@ -338,14 +354,22 @@ Laptop S
         color: #375c77;
     }
 
+    .chooseApartmentLabel {
+        display: flex;
+    }
+
 
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 430px) {
     .floorPlanSection {
         padding: 18px
     }
 
+    .floorPlan {
+        rotate: 90deg;
+        margin-top: 10%;
+    }
 
 
     .floorPlanImage {

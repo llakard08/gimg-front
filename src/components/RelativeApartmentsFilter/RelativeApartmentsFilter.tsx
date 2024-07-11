@@ -305,7 +305,7 @@ const RelativeApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
                             thumbClassName="thumb"
                             trackClassName="track"
                             min={0}
-                            max={4000}
+                            max={buildingConfig.maxPrice}
                             value={rangeValues}
                             onChange={handleSliderChange}
 

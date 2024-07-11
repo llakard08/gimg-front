@@ -16,6 +16,7 @@ export interface Apartment {
     balcony: number,
     type: string,
     sold: boolean,
+    reserved: boolean,
     floorNumber: number
     price: number
     entranceArea: number,

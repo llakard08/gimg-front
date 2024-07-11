@@ -43,6 +43,7 @@
 
   "apartment.selection.header.label.first":  "აირჩიე სასურველი სართული",
   "apartment.selection.header.label.second":  "BATUMI SEASIDE RESIDENCE",
+  "floor.plan.selection.header" : "აირჩიე სასურველი აპარტამენტი",
 
   "filter.header.find.fast.label" : "მოძებნე სწრაფად",
   "filter.standard.label" : "სტანდარტული",

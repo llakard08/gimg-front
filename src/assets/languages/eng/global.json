@@ -44,6 +44,7 @@
 
   "apartment.selection.header.label.first":  "Choose the floor",
   "apartment.selection.header.label.second":  "BATUMI SEASIDE RESIDENCE",
+  "floor.plan.selection.header" : "Choose apartment",
 
   "filter.header.find.fast.label" : "Find Fast",
   "filter.standard.label" : "Standard",

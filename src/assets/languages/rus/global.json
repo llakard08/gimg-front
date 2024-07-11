@@ -43,6 +43,7 @@
 
   "apartment.selection.header.label.first":  "Выбрать Этаж и Апартаменты",
   "apartment.selection.header.label.second":  "BATUMI SEASIDE RESIDENCE",
+  "floor.plan.selection.header" : "Выбрать Апартамент",
 
   "filter.header.find.fast.label" : "Быстрый поиск",
   "filter.standard.label" : "Стандартный",
@@ -67,7 +68,7 @@
   "bedroom.label": "Спальня",
   "outer.space.label": "внешний площадь",
   "total.area.label": "Общая площадь",
-  "close.button.label": "Закрыт",
+  "close.button.label": "Закрыть",
   "meter.label" : "м",
   "go.back.label": "Возвращаться",
   "consultation.label": "Получить консультацию",
