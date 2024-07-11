@@ -314,6 +314,8 @@ const ApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
                                 apartmentAreasToDisplay.forEach((apartment) => newState.push(false));
                                 return newState;
                             })
+                            setSearchErrorRaised(false)
+                            setErrorMessage('')
                         }}>
                         <h4>{t("filter.standard.label")}</h4>
                     </button>
@@ -329,6 +331,8 @@ const ApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
                                 duplexApartmentAreas.forEach((apartment) => newState.push(false));
                                 return newState;
                             })
+                            setSearchErrorRaised(false)
+                            setErrorMessage('')
                         }}>
                         <h4>{t("filter.duplex.label")}</h4>
                     </button>
@@ -423,10 +427,10 @@ const ApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
                         }
                     </div>
                 </div>
-            </div>
-            {searchErrorRaised && <div className={styles.errorWrapper}>{errorMessage}</div>
+                {searchErrorRaised && <div className={styles.errorWrapper}>{errorMessage}</div>
 
-            }
+                }
+            </div>
             <div className={styles.filterButtons}>
                 <button className={`${styles.clear}`} onClick={() => {
                     clearSearchInputs();
