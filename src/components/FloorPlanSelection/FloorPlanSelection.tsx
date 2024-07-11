@@ -10,7 +10,6 @@ import RenderFloorFour from "../FloorRenders/RenderFloorFour/RenderFloorFour";
 import RenderFloorFive from "../FloorRenders/RenderFloorFive/RenderFloorFive";
 import RenderFloorSix from "../FloorRenders/RenderFloorSix/RenderFloorSix";
 import RenderFloorSeven from "../FloorRenders/RenderFloorSeven/RenderFloorSeven";
-import RenderFloorEight from "../FloorRenders/RenderFloorEight/RenderFloorEight";
 import {Apartment, Building, Floor} from "../../interfaces/Apartments";
 import {useTranslation} from "react-i18next";
 import i18n from "../../utils/i18n";
@@ -31,11 +30,12 @@ interface FloorPlanSelectionProps {
 const FloorPlanSelection: FC<FloorPlanSelectionProps> = (props) => {
     const {t} = useTranslation("global")
 
+
     function getFloorData(floorNumber: number): FloorData {
         let result: FloorData = {
             apartmentsOfCurrentFloor: [],
             availableApartments: 0,
-            totalApartments: 0,
+            totalApartments: 0
         }
         const building = buildingConfig as Building;
         const foundFloor = building.floors.find((floor: Floor) => {
@@ -45,6 +45,11 @@ const FloorPlanSelection: FC<FloorPlanSelectionProps> = (props) => {
             result.apartmentsOfCurrentFloor = foundFloor.apartments
             result.totalApartments = foundFloor.apartments.length
             result.availableApartments = foundFloor.apartments.filter((apartment) => !apartment.sold).length
+        }
+        const foundDuplexApartment: Apartment | undefined = foundFloor?.apartments.find((apartment) => apartment.type === 'duplex')
+        if (foundDuplexApartment !== undefined) {
+            result.asTwoFloor = true
+            result.floorsNumbers = [floorNumber, floorNumber + 1]
         }
         return result
     }
@@ -107,12 +112,12 @@ const FloorPlanSelection: FC<FloorPlanSelectionProps> = (props) => {
                     setFlatSectionVisible={props.setFlatSectionVisible}
                     setSelectedApartment={props.setSelectedApartment}
                     floorData={getFloorData(11)}></RenderFloorSeven>;
-            case 12:
-                return <RenderFloorEight
-                    setFloorPlanSectionVisible={props.setFloorPlanSectionVisible}
-                    setFlatSectionVisible={props.setFlatSectionVisible}
-                    setSelectedApartment={props.setSelectedApartment}
-                    floorData={getFloorData(12)}></RenderFloorEight>;
+            // case 12:
+            //     return <RenderFloorEight
+            //         setFloorPlanSectionVisible={props.setFloorPlanSectionVisible}
+            //         setFlatSectionVisible={props.setFlatSectionVisible}
+            //         setSelectedApartment={props.setSelectedApartment}
+            //         floorData={getFloorData(12)}></RenderFloorEight>;
             default:
                 return;
         }
@@ -129,7 +134,7 @@ const FloorPlanSelection: FC<FloorPlanSelectionProps> = (props) => {
             <div className={`${styles.floorPlanSection} ${styles.sectionContainer}`}>
                 <div className={styles.floorHeader}>
                     <div className={styles.floor}>
-                        <h2 className={styles.gimgGeorgianText}>{props.selectedFloorNumber} {t("floor.label")}</h2>
+                        <h2 className={styles.gimgGeorgianText}>{getFloorData(props.selectedFloorNumber).asTwoFloor ? getFloorData(props.selectedFloorNumber).floorsNumbers?.join('-') : props.selectedFloorNumber} {t("floor.label")}</h2>
                         <h4 className={styles.blueH3}><span
                             className={styles.nowrap}>{t("available.label")}</span> {t("apartment.label")} <span
                             className={styles.bold}>{getFloorData(props.selectedFloorNumber).availableApartments} </span>
@@ -149,21 +154,23 @@ const FloorPlanSelection: FC<FloorPlanSelectionProps> = (props) => {
                 </div>
 
                 <div className={styles.floorButtons}>
-                    {props.selectedFloorNumber > 5 && <button className={`${styles.primaryButton} ${styles.withIcon} ${styles.leftButton}`}
-                             disabled={props.selectedFloorNumber <= 5}
-                             onClick={() => props.setSelectedFloorNumber(props.selectedFloorNumber - 1)}>
-                        <img src={arrowHeadLeft} alt=""/>
-                        <h4 className={styles.nowrap}>{props.selectedFloorNumber <= 5 ? props.selectedFloorNumber : props.selectedFloorNumber - 1} {t("floor.label")}</h4>
-                    </button>
+                    {props.selectedFloorNumber > 5 &&
+                        <button className={`${styles.primaryButton} ${styles.withIcon} ${styles.leftButton}`}
+                                disabled={props.selectedFloorNumber <= 5}
+                                onClick={() => props.setSelectedFloorNumber(props.selectedFloorNumber - 1)}>
+                            <img src={arrowHeadLeft} alt=""/>
+                            <h4 className={styles.nowrap}>{props.selectedFloorNumber <= 5 ? props.selectedFloorNumber : props.selectedFloorNumber - 1} {t("floor.label")}</h4>
+                        </button>
                     }
                     <hr className={styles.floorLine}/>
 
-                    {props.selectedFloorNumber < 12 && <button className={`${styles.primaryButton} ${styles.withIcon} ${styles.rightButton}`}
-                            disabled={props.selectedFloorNumber >= 12}
-                            onClick={() => props.setSelectedFloorNumber(props.selectedFloorNumber + 1)}>
-                        <h4 className={styles.nowrap}>{props.selectedFloorNumber >= 12 ? props.selectedFloorNumber : props.selectedFloorNumber + 1} {t("floor.label")}</h4>
-                        <img src={arrowHeadRight} alt=""/>
-                    </button>
+                    {props.selectedFloorNumber < 11 &&
+                        <button className={`${styles.primaryButton} ${styles.withIcon} ${styles.rightButton}`}
+                                disabled={props.selectedFloorNumber >= 11}
+                                onClick={() => props.setSelectedFloorNumber(props.selectedFloorNumber + 1)}>
+                            <h4 className={styles.nowrap}>{props.selectedFloorNumber >= 11 ? props.selectedFloorNumber : props.selectedFloorNumber + 1} {t("floor.label")}</h4>
+                            <img src={arrowHeadRight} alt=""/>
+                        </button>
                     }
                 </div>
                 <div className={styles.chooseApartmentLabel}>

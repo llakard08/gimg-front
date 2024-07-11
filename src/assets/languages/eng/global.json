@@ -78,6 +78,8 @@
   "gallery.label": "Gallery",
   "filter.label" : "Filter",
   "continue.label" : "Continue",
+  "apartment.area.label" : "Apartment area",
+  "balcony.area.label" : "Balcony area",
 
   "sea.view": "Sea View",
   "sun.side": "Sun Side"

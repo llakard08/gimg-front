@@ -92,30 +92,16 @@ const FlatSelection: FC<FlatSelectionProps> = (props) => {
                         </div>
                         <hr className={styles.flatHr}/>
                         <div className={styles.specifications}>
-                            <h4>{t("entrance.label")}</h4>
-                            <h4>{props.selectedApartment?.entranceArea} {t("meter.label")}<sup>2</sup></h4>
-                            <h4>{t("lobby.label")}</h4>
-                            <h4>{props.selectedApartment?.loungeArea} {t("meter.label")}<sup>2</sup></h4>
-                            <h4>{t("kitchen.label")}</h4>
-                            <h4>{props.selectedApartment?.kitchenArea} {t("meter.label")}<sup>2</sup></h4>
-                            <h4>{t("bathroom.label")}</h4>
-                            <h4>{props.selectedApartment?.bathroomArea} {t("meter.label")}<sup>2</sup></h4>
-                            {
-                                props.selectedApartment?.bedrooms.map((bedroom, index) => {
-                                    return (<>
-                                        <h4>{t("bedroom.label")} #{index + 1}</h4>
-                                        <h4>{bedroom.area} {t("meter.label")}<sup>2</sup></h4>
-                                    </>);
-                                })
-                            }
-                            {
-                                props.selectedApartment?.outerSpaces.map((outerSpace, index) => {
-                                    return (<>
-                                        <h4>{t("outer.space.label")} #{index + 1}</h4>
-                                        <h4>{outerSpace.area} {t("meter.label")}<sup>2</sup></h4>
-                                    </>);
-                                })
-                            }
+                            <h4>{t("total.area.label")}</h4>
+                            <h4>{(props.selectedApartment!.apartmentArea + props.selectedApartment!.balcony
+                                + (props.selectedApartment!.linkedApartment ? (props.selectedApartment!.linkedApartment?.apartmentArea + props.selectedApartment!.linkedApartment?.balcony) : 0)).toFixed(2)} {t("meter.label")}<sup>2</sup>
+                            </h4>
+                            <h4>{t("apartment.area.label")}</h4>
+                            <h4>{(props.selectedApartment!.apartmentArea + (props.selectedApartment!.linkedApartment ? (props.selectedApartment!.linkedApartment?.apartmentArea) : 0)).toFixed(2)} {t("meter.label")}<sup>2</sup>
+                            </h4>
+                            <h4>{t("balcony.area.label")}</h4>
+                            <h4>{(props.selectedApartment!.balcony + (props.selectedApartment!.linkedApartment ? (props.selectedApartment!.linkedApartment?.balcony) : 0)).toFixed(2)} {t("meter.label")}<sup>2</sup>
+                            </h4>
                         </div>
                         <div className={styles.otherSpecifications}>
                             {

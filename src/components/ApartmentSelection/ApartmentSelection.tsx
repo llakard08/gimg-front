@@ -90,7 +90,7 @@ const ApartmentSelection: FC<ApartmentSelectionProps> = () => {
             <div className={styles.buildingWrapper}>
                 <svg width="1700" height="776" viewBox="0 0 1700 776" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path onMouseDown={() => {
-                        processCurrentFloorSelection(12);
+                        processCurrentFloorSelection(11);
                     }} className={styles.cover}
                           d="M4 114.5V75L18.5 73.5L52.2272 61.5L90 39.5L149 18.5L183.5 12.5L221 7.5L259.5 4.5H334L409.5 7.5L456.5 15L499.5 27.5L537.5 41L566 51L576.5 55L598.5 63.5L624.5 73.5L651.5 83L682.5 92.5L698.5 102L708.5 114L713 140.5L723.5 150.5L702.5 145.5L669.5 136.5L646 129L615.5 118.5L586.5 107L554 95.5L518 84L485 75L453 68L414.5 61L381.5 56L351 52L326 50L297 49L272.5 49.5L244 50.5L216.5 52.5L187.5 55.5L162.5 59L149 61.5L132 65L111 70.5L92.5 76.5L75.5 84L60.5 91.5L51 96L39.5 102.5L25 108.5L11 113L4 114.5Z"
                           fill="#0062A9" fillOpacity="0.35"/>

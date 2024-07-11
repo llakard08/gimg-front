@@ -76,6 +76,8 @@
   "gallery.label": "გალერეა",
   "filter.label" : "ფილტრი",
   "continue.label" : "გაგრძელება",
+  "apartment.area.label" : "ძირითადი ფართობი",
+  "balcony.area.label" : "საზაფხულო ფართობი",
 
   "sea.view": "ზღვის ხედი",
   "sun.side": "მზის მხარე"

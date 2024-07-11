@@ -15,20 +15,6 @@
           "reserved": false,
           "floorNumber": 5,
           "price": 2300,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-1.png",
           "benefits": [
             {
@@ -48,20 +34,6 @@
           "reserved": false,
           "floorNumber": 5,
           "price": 2300,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-2.png",
           "benefits": [
             {
@@ -81,20 +53,6 @@
           "reserved": false,
           "floorNumber": 5,
           "price": 2300,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-3.png",
           "benefits": [
             {
@@ -114,20 +72,6 @@
           "reserved": false,
           "floorNumber": 5,
           "price": 2300,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-4.png",
           "benefits": [
             {
@@ -147,20 +91,6 @@
           "reserved": false,
           "floorNumber": 5,
           "price": 2300,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-5.png",
           "benefits": [
             {
@@ -180,20 +110,6 @@
           "reserved": false,
           "floorNumber": 5,
           "price": 2300,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-6.png",
           "benefits": [
             {
@@ -213,20 +129,6 @@
           "reserved": false,
           "floorNumber": 5,
           "price": 2300,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-7.png",
           "benefits": [
             {
@@ -252,20 +154,6 @@
           "reserved": false,
           "floorNumber": 6,
           "price": 2300,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-1.png",
           "benefits": [
             {
@@ -285,20 +173,6 @@
           "reserved": false,
           "floorNumber": 6,
           "price": 2300,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-2.png",
           "benefits": [
             {
@@ -318,20 +192,6 @@
           "reserved": false,
           "floorNumber": 6,
           "price": 2300,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-3.png",
           "benefits": [
             {
@@ -351,20 +211,6 @@
           "reserved": false,
           "floorNumber": 6,
           "price": 2300,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-4.png",
           "benefits": [
             {
@@ -384,20 +230,6 @@
           "reserved": false,
           "floorNumber": 6,
           "price": 2300,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-5.png",
           "benefits": [
             {
@@ -417,20 +249,6 @@
           "reserved": false,
           "floorNumber": 6,
           "price": 2300,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-6.png",
           "benefits": [
             {
@@ -450,20 +268,6 @@
           "reserved": false,
           "floorNumber": 6,
           "price": 2300,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-7.png",
           "benefits": [
             {
@@ -489,20 +293,6 @@
           "reserved": false,
           "floorNumber": 7,
           "price": 2600,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-1.png",
           "benefits": [
             {
@@ -522,20 +312,6 @@
           "reserved": false,
           "floorNumber": 7,
           "price": 2600,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-2.png",
           "benefits": [
             {
@@ -555,20 +331,6 @@
           "reserved": false,
           "floorNumber": 7,
           "price": 2600,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-3.png",
           "benefits": [
             {
@@ -588,20 +350,6 @@
           "reserved": false,
           "floorNumber": 7,
           "price": 2600,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-4.png",
           "benefits": [
             {
@@ -621,20 +369,6 @@
           "reserved": false,
           "floorNumber": 7,
           "price": 2600,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-5.png",
           "benefits": [
             {
@@ -654,20 +388,6 @@
           "reserved": false,
           "floorNumber": 7,
           "price": 2600,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-6.png",
           "benefits": [
             {
@@ -687,20 +407,6 @@
           "reserved": false,
           "floorNumber": 7,
           "price": 2600,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-8.png",
           "benefits": [
             {
@@ -720,20 +426,6 @@
           "reserved": false,
           "floorNumber": 7,
           "price": 2600,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-9.png",
           "benefits": [
             {
@@ -759,20 +451,6 @@
           "reserved": false,
           "floorNumber": 8,
           "price": 2600,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-1.png",
           "benefits": [
             {
@@ -792,20 +470,6 @@
           "reserved": false,
           "floorNumber": 8,
           "price": 2600,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-2.png",
           "benefits": [
             {
@@ -825,20 +489,6 @@
           "reserved": false,
           "floorNumber": 8,
           "price": 2600,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-3.png",
           "benefits": [
             {
@@ -858,20 +508,6 @@
           "reserved": false,
           "floorNumber": 8,
           "price": 2600,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-4.png",
           "benefits": [
             {
@@ -891,20 +527,6 @@
           "reserved": false,
           "floorNumber": 8,
           "price": 2600,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-5.png",
           "benefits": [
             {
@@ -924,20 +546,6 @@
           "reserved": false,
           "floorNumber": 8,
           "price": 2600,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-6.png",
           "benefits": [
             {
@@ -957,20 +565,6 @@
           "reserved": false,
           "floorNumber": 8,
           "price": 2600,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-10.png",
           "benefits": [
             {
@@ -990,20 +584,6 @@
           "reserved": false,
           "floorNumber": 8,
           "price": 2600,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-11.png",
           "benefits": [
             {
@@ -1029,20 +609,6 @@
           "reserved": false,
           "floorNumber": 9,
           "price": 2900,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-1.png",
           "benefits": [
             {
@@ -1062,20 +628,6 @@
           "reserved": false,
           "floorNumber": 9,
           "price": 2900,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-2.png",
           "benefits": [
             {
@@ -1095,20 +647,6 @@
           "reserved": false,
           "floorNumber": 9,
           "price": 2900,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-3.png",
           "benefits": [
             {
@@ -1128,20 +666,6 @@
           "reserved": false,
           "floorNumber": 9,
           "price": 2900,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-4.png",
           "benefits": [
             {
@@ -1161,20 +685,6 @@
           "reserved": false,
           "floorNumber": 9,
           "price": 2900,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-5.png",
           "benefits": [
             {
@@ -1194,20 +704,6 @@
           "reserved": false,
           "floorNumber": 9,
           "price": 2900,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-6.png",
           "benefits": [
             {
@@ -1227,20 +723,6 @@
           "reserved": false,
           "floorNumber": 9,
           "price": 2900,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-10.png",
           "benefits": [
             {
@@ -1260,20 +742,6 @@
           "reserved": false,
           "floorNumber": 9,
           "price": 2900,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-11.png",
           "benefits": [
             {
@@ -1299,20 +767,6 @@
           "reserved": false,
           "floorNumber": 10,
           "price": 2900,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-1.png",
           "benefits": [
             {
@@ -1332,20 +786,6 @@
           "reserved": false,
           "floorNumber": 10,
           "price": 2900,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-2.png",
           "benefits": [
             {
@@ -1365,20 +805,6 @@
           "reserved": false,
           "floorNumber": 10,
           "price": 2900,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-3.png",
           "benefits": [
             {
@@ -1398,20 +824,6 @@
           "reserved": false,
           "floorNumber": 10,
           "price": 2900,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-4.png",
           "benefits": [
             {
@@ -1431,20 +843,6 @@
           "reserved": false,
           "floorNumber": 10,
           "price": 2900,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-5.png",
           "benefits": [
             {
@@ -1464,20 +862,6 @@
           "reserved": false,
           "floorNumber": 10,
           "price": 2900,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-6.png",
           "benefits": [
             {
@@ -1497,20 +881,6 @@
           "reserved": false,
           "floorNumber": 10,
           "price": 2900,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-10.png",
           "benefits": [
             {
@@ -1530,20 +900,6 @@
           "reserved": false,
           "floorNumber": 10,
           "price": 2900,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-11.png",
           "benefits": [
             {
@@ -1562,27 +918,13 @@
       "apartments": [
         {
           "apartmentNumber": 1,
-          "apartmentArea": 92.20,
-          "balcony": 8.30,
+          "apartmentArea": 93.60,
+          "balcony": 8.34,
           "type": "duplex",
           "sold": false,
           "reserved": false,
           "floorNumber": 11,
           "price": 3500,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-12-1.png",
           "benefits": [
             {
@@ -1593,34 +935,20 @@
             }
           ],
           "linkedApartment": {
-            "apartmentArea": 82.60,
-            "balcony": 17.00,
+            "apartmentArea": 55.60,
+            "balcony": 8.43,
             "pictureName": "apartment-12-2.png"
           }
         },
         {
           "apartmentNumber": 2,
-          "apartmentArea": 105.96,
+          "apartmentArea": 109.94,
           "balcony": 13.08,
-          "type": "standard",
+          "type": "duplex",
           "sold": false,
           "reserved": false,
           "floorNumber": 11,
           "price": 3500,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-13.png",
           "benefits": [
             {
@@ -1629,7 +957,12 @@
             {
               "languageKey": "sea.view"
             }
-          ]
+          ],
+          "linkedApartment": {
+            "apartmentArea": 109.94,
+            "balcony": 13.02,
+            "pictureName": "apartment-12-2.png"
+          }
         },
         {
           "apartmentNumber": 3,
@@ -1640,20 +973,6 @@
           "reserved": false,
           "floorNumber": 11,
           "price": 3500,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-14.png",
           "benefits": [
             {
@@ -1673,163 +992,6 @@
           "reserved": false,
           "floorNumber": 11,
           "price": 3500,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
-          "pictureName": "apartment-15.png",
-          "benefits": [
-            {
-              "languageKey": "sun.side"
-            },
-            {
-              "languageKey": "sea.view"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "floorNumber": 12,
-      "numberOfApartments": 4,
-      "apartments": [
-        {
-          "apartmentNumber": 1,
-          "apartmentArea": 92.20,
-          "balcony": 8.30,
-          "type": "duplex",
-          "sold": false,
-          "reserved": false,
-          "floorNumber": 12,
-          "price": 3500,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
-          "pictureName": "apartment-12-1.png",
-          "benefits": [
-            {
-              "languageKey": "sun.side"
-            },
-            {
-              "languageKey": "sea.view"
-            }
-          ],
-          "linkedApartment": {
-            "apartmentArea": 82.60,
-            "balcony": 17.00,
-            "pictureName": "apartment-12-2.png"
-          }
-        },
-        {
-          "apartmentNumber": 2,
-          "apartmentArea": 105.96,
-          "balcony": 13.08,
-          "type": "standard",
-          "sold": false,
-          "reserved": false,
-          "floorNumber": 12,
-          "price": 3500,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
-          "pictureName": "apartment-13.png",
-          "benefits": [
-            {
-              "languageKey": "sun.side"
-            },
-            {
-              "languageKey": "sea.view"
-            }
-          ]
-        },
-        {
-          "apartmentNumber": 3,
-          "apartmentArea": 104.19,
-          "balcony": 17.05,
-          "type": "standard",
-          "sold": false,
-          "reserved": false,
-          "floorNumber": 12,
-          "price": 3500,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
-          "pictureName": "apartment-14.png",
-          "benefits": [
-            {
-              "languageKey": "sun.side"
-            },
-            {
-              "languageKey": "sea.view"
-            }
-          ]
-        },
-        {
-          "apartmentNumber": 4,
-          "apartmentArea": 119.20,
-          "balcony": 21.80,
-          "type": "standard",
-          "sold": false,
-          "reserved": false,
-          "floorNumber": 12,
-          "price": 3500,
-          "entranceArea": 14.5,
-          "kitchenArea": 10.1,
-          "bathroomArea": 5.5,
-          "loungeArea": 4.1,
-          "bedrooms": [
-            {
-              "area": 10.5
-            }
-          ],
-          "outerSpaces": [
-            {
-              "area": 4.5
-            }
-          ],
           "pictureName": "apartment-15.png",
           "benefits": [
             {

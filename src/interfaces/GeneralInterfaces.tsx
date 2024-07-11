@@ -22,6 +22,8 @@ export interface FloorData {
     apartmentsOfCurrentFloor: Apartment[]
     availableApartments: number
     totalApartments: number
+    asTwoFloor? : boolean | undefined
+    floorsNumbers?: number[] | undefined
 }
 
 export interface FlatAvailabilityCondition {
