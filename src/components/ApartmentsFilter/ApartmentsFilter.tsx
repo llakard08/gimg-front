@@ -28,7 +28,7 @@ const ApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
     const [standardApartmentAreas, setStandardApartmentAreas] = useState<number[]>([]);
     const [duplexApartmentAreas, setDuplexApartmentAreas] = useState<number[]>([]);
     const [apartmentAreasToDisplay, setApartmentAreasToDisplay] = useState<number[]>([]);
-    const [selectedFloors, setSelectedFloors] = useState<boolean[]>([false, false, false, false, false, false, false, false]);
+    const [selectedFloors, setSelectedFloors] = useState<boolean[]>([false, false, false, false, false, false, false]);
     const [selectedFloorsQuantity, setSelectedFloorsQuantity] = useState<number>(0);
     const [selectedAreas, setSelectedAreas] = useState<boolean[]>([]);
     const [selectedApartmentType, setSelectedApartmentType] = useState<string | undefined>(undefined);
@@ -393,7 +393,6 @@ const ApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
                                                         }
                                                     });
                                                     setSelectedFloorsQuantity(selectedQuantity)
-                                                    // getAvailableApartmentAreasForSelectedFloors()
                                                     return newStates;
                                                 })
                                             }}>{index + 5}
