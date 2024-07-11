@@ -39,10 +39,12 @@
     justify-items: left;
     left: 0;
     width: 100%;
+    height: 90%;
     overflow: hidden;
 }
 
-
+.building {
+}
 
 .covers {
     left: auto;
@@ -276,14 +278,16 @@ Laptop S
         align-items: center;
         width: 100%;
     }
-
-
-
-
 }
 
 @media only screen and (max-width: 425px) {
     .homeContainer h1 {
         font-size: 1em;
+    }
+}
+
+@media only screen and (max-height: 850px) {
+    .buildingWrapper {
+        top: 30vh;
     }
 }
