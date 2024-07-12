@@ -98,10 +98,6 @@ const FlatSelection: FC<FlatSelectionProps> = (props) => {
                         </div>
                         <hr className={styles.flatHr}/>
                         <div className={styles.specifications}>
-                            <h4>{t("total.area.label")}</h4>
-                            <h4>{(props.selectedApartment!.apartmentArea + props.selectedApartment!.balcony
-                                + (props.selectedApartment!.linkedApartment ? (props.selectedApartment!.linkedApartment?.apartmentArea + props.selectedApartment!.linkedApartment?.balcony) : 0)).toFixed(2)} {t("meter.label")}<sup>2</sup>
-                            </h4>
                             <h4>{t("apartment.area.label")}</h4>
                             <h4>{(props.selectedApartment!.apartmentArea + (props.selectedApartment!.linkedApartment ? (props.selectedApartment!.linkedApartment?.apartmentArea) : 0)).toFixed(2)} {t("meter.label")}<sup>2</sup>
                             </h4>
