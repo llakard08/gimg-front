@@ -85,17 +85,18 @@ const FlatSelection: FC<FlatSelectionProps> = (props) => {
                             <h3 className={styles.wholeAreaNoWrap}>{props.selectedApartment?.price}$</h3>
                         </div>
                         <div className={styles.wholeArea}>
+                            <h4 className={styles.wholeAreaNoWrap}>{t("total.price.label")}</h4>
+                            <h3 className={styles.wholeAreaNoWrap}>{((props.selectedApartment!.apartmentArea + props.selectedApartment!.balcony
+                                + (props.selectedApartment!.linkedApartment ? (props.selectedApartment!.linkedApartment?.apartmentArea + props.selectedApartment!.linkedApartment?.balcony) : 0)) * props.selectedApartment!.price).toLocaleString(undefined, {maximumFractionDigits:0})}$
+                            </h3>
+                        </div>
+                        <div className={styles.wholeArea}>
                             <h4 className={styles.wholeAreaNoWrap}>{t("total.area.label")}</h4>
                             <h3 className={styles.wholeAreaNoWrap}>{(props.selectedApartment!.apartmentArea + props.selectedApartment!.balcony
                                 + (props.selectedApartment!.linkedApartment ? (props.selectedApartment!.linkedApartment?.apartmentArea + props.selectedApartment!.linkedApartment?.balcony) : 0)).toFixed(2)} {t("meter.label")}<sup>2</sup>
                             </h3>
                         </div>
-                        <div className={styles.wholeArea}>
-                            <h4 className={styles.wholeAreaNoWrap}>{t("total.price.label")}</h4>
-                            <h3 className={styles.wholeAreaNoWrap}>{((props.selectedApartment!.apartmentArea + props.selectedApartment!.balcony
-                                + (props.selectedApartment!.linkedApartment ? (props.selectedApartment!.linkedApartment?.apartmentArea + props.selectedApartment!.linkedApartment?.balcony) : 0)) * props.selectedApartment!.price).toFixed(2)}$
-                            </h3>
-                        </div>
+
                         <hr className={styles.flatHr}/>
                         <div className={styles.specifications}>
                             <h4>{t("apartment.area.label")}</h4>
