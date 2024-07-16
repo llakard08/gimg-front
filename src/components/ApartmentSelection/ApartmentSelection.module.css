@@ -154,6 +154,13 @@
     cursor: pointer;
 }
 
+.floorOn {
+    display: inherit;
+}
+
+.floorOff {
+    display: none;
+}
 /*
 Laptop XL
 */
