@@ -51,10 +51,10 @@ const Header: FC<HeaderProps> = (props) => {
                         <img src={arrowHeadDown} alt=""/>
                         <div className={isDropdownActive ? styles.dropdownMenu : styles.dropdownMenuGone}>
                             {
-                                availableLanguages.filter((language) => language !== selectedLanguage).map((language) =>
-                                    <button className={styles.dropdownMenuItem}>
+                                availableLanguages.filter((language) => language !== selectedLanguage).map((language,index) =>
+                                    <div key={index} className={styles.dropdownMenuItem}>
                                         <a onClick={() => handleLanguageChange(language)}>{language}</a>
-                                    </button>
+                                    </div>
                                 )
                             }
                         </div>
@@ -84,7 +84,7 @@ const Header: FC<HeaderProps> = (props) => {
                     <a href={"tel:".concat(contact.phoneNumber)}>
                         <button className={`${styles.primaryButton} ${styles.navbarButton} ${styles.withIcon}`}>
                             <img src={phoneIcon} className={styles.phoneIcon} alt=""/>
-                            <a className={styles.phoneNumber}>{contact.phoneNumber}</a>
+                            <p className={styles.phoneNumber}>{contact.phoneNumber}</p>
                         </button>
                     </a>
                     <div className={styles.openBtn} onClick={() => {

@@ -21,6 +21,13 @@
     line-height: 0;
 }
 
+.phoneNumber {
+    white-space: nowrap;
+    font-size: 1.15em;
+    color: var(--text-light);
+    margin: 0 var(--spacing-md);
+}
+
 @media only screen and (max-width:768px) {
     .MobileMenu {
         width: 100vw;

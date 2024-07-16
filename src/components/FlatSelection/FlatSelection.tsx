@@ -127,7 +127,7 @@ const FlatSelection: FC<FlatSelectionProps> = (props) => {
                                 <button className={`${styles.primaryButton} ${styles.navbarButton}  ${styles.withIcon}`}
                                         style={{alignItems: "center"}}>
                                     <img style={{marginRight: "5px"}} src={phoneIcon} alt=""/>
-                                    <a className={styles.phoneNumber}>{contact.phoneNumber}</a>
+                                    <p className={styles.phoneNumber}>{contact.phoneNumber}</p>
                                 </button>
                             </a>
 

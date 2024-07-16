@@ -74,7 +74,7 @@ const MobileMenu: FC<MobileMenuProps> = (props) => {
                     <a href={"tel:".concat(contact.phoneNumber)}>
                         <button className={`${styles.primaryButton} ${styles.navbarButton} ${styles.withIcon}`}>
                             <img src={phoneIcon} className={styles.phoneIcon} alt=""/>
-                            <a className={styles.phoneNumber}>{contact.phoneNumber}</a>
+                            <p className={styles.phoneNumber}>{contact.phoneNumber}</p>
                         </button>
                     </a>
                 </div>

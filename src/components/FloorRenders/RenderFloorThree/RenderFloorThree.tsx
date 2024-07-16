@@ -141,129 +141,129 @@ const RenderFloorThree: FC<RenderFloorThreeProps> = (props) => {
                     stroke="#6A8090" strokeWidth="1.5"/>
                 <path d="M687.5 248L699 213" stroke="#6A8090" strokeWidth="1.5"/>
                 <line x1="163.552" y1="118.264" x2="164.172" y2="103.483" stroke="white" strokeWidth="0.55175"
-                      stroke-dasharray="1.1 1.1"/>
+                      strokeDasharray="1.1 1.1"/>
                 <path d="M164.271 103.706V103.706C167.127 102.739 170.23 104.25 171.229 107.094L171.675 108.363"
-                      stroke="white" strokeWidth="0.55175" stroke-dasharray="1.1 1.1"/>
+                      stroke="white" strokeWidth="0.55175" strokeDasharray="1.1 1.1"/>
                 <rect x="162.397" y="117.682" width="14.3962" height="1.65525" rx="0.827625"
                       transform="rotate(-46.8935 162.397 117.682)" fill="#D9D9D9"/>
                 <line x1="286.743" y1="132.633" x2="284.199" y2="118.06" stroke="white" strokeWidth="0.55175"
-                      stroke-dasharray="1.1 1.1"/>
+                      strokeDasharray="1.1 1.1"/>
                 <path d="M284.343 118.257V118.257C286.927 116.703 290.28 117.518 291.863 120.084L292.57 121.229"
-                      stroke="white" strokeWidth="0.55175" stroke-dasharray="1.1 1.1"/>
+                      stroke="white" strokeWidth="0.55175" strokeDasharray="1.1 1.1"/>
                 <rect x="285.491" y="132.312" width="14.3962" height="1.65525" rx="0.827625"
                       transform="rotate(-59.2018 285.491 132.312)" fill="#D9D9D9"/>
                 <line x1="503.513" y1="113.242" x2="504.222" y2="98.4649" stroke="white" strokeWidth="0.55175"
-                      stroke-dasharray="1.1 1.1"/>
+                      strokeDasharray="1.1 1.1"/>
                 <path d="M504.32 98.6886V98.6886C507.182 97.7385 510.275 99.2679 511.257 102.119L511.695 103.39"
-                      stroke="white" strokeWidth="0.55175" stroke-dasharray="1.1 1.1"/>
+                      stroke="white" strokeWidth="0.55175" strokeDasharray="1.1 1.1"/>
                 <rect x="502.361" y="112.653" width="14.3962" height="1.65525" rx="0.827625"
                       transform="rotate(-46.5481 502.361 112.653)" fill="#D9D9D9"/>
                 <line x1="731.043" y1="161.023" x2="734.705" y2="146.689" stroke="white" strokeWidth="0.55175"
-                      stroke-dasharray="1.1 1.1"/>
+                      strokeDasharray="1.1 1.1"/>
                 <path d="M734.756 146.928V146.928C737.75 146.572 740.473 148.692 740.863 151.682L741.037 153.016"
-                      stroke="white" strokeWidth="0.55175" stroke-dasharray="1.1 1.1"/>
+                      stroke="white" strokeWidth="0.55175" strokeDasharray="1.1 1.1"/>
                 <rect x="730.033" y="160.215" width="14.3962" height="1.65525" rx="0.827625"
                       transform="rotate(-34.9642 730.033 160.215)" fill="#D9D9D9"/>
                 <line x1="715.043" y1="179.023" x2="718.705" y2="164.689" stroke="white" strokeWidth="0.55175"
-                      stroke-dasharray="1.1 1.1"/>
+                      strokeDasharray="1.1 1.1"/>
                 <path d="M718.756 164.928V164.928C721.75 164.572 724.473 166.692 724.863 169.682L725.037 171.016"
-                      stroke="white" strokeWidth="0.55175" stroke-dasharray="1.1 1.1"/>
+                      stroke="white" strokeWidth="0.55175" strokeDasharray="1.1 1.1"/>
                 <rect x="714.033" y="178.215" width="14.3962" height="1.65525" rx="0.827625"
                       transform="rotate(-34.9642 714.033 178.215)" fill="#D9D9D9"/>
                 <line x1="739.532" y1="167.452" x2="753.27" y2="172.942" stroke="white" strokeWidth="0.55175"
-                      stroke-dasharray="1.1 1.1"/>
+                      strokeDasharray="1.1 1.1"/>
                 <path d="M753.027 172.961V172.961C752.992 175.976 750.537 178.402 747.522 178.401L746.177 178.401"
-                      stroke="white" strokeWidth="0.55175" stroke-dasharray="1.1 1.1"/>
+                      stroke="white" strokeWidth="0.55175" strokeDasharray="1.1 1.1"/>
                 <rect x="740.464" y="166.556" width="14.3962" height="1.65525" rx="0.827625"
                       transform="rotate(62.4832 740.464 166.556)" fill="#D9D9D9"/>
                 <line x1="291.743" y1="162.633" x2="289.199" y2="148.06" stroke="white" strokeWidth="0.55175"
-                      stroke-dasharray="1.1 1.1"/>
+                      strokeDasharray="1.1 1.1"/>
                 <path d="M289.343 148.257V148.257C291.927 146.703 295.28 147.518 296.863 150.084L297.57 151.229"
-                      stroke="white" strokeWidth="0.55175" stroke-dasharray="1.1 1.1"/>
+                      stroke="white" strokeWidth="0.55175" strokeDasharray="1.1 1.1"/>
                 <rect x="290.491" y="162.312" width="14.3962" height="1.65525" rx="0.827625"
                       transform="rotate(-59.2018 290.491 162.312)" fill="#D9D9D9"/>
                 <line x1="515.782" y1="148.396" x2="515.863" y2="133.602" stroke="white" strokeWidth="0.55175"
-                      stroke-dasharray="1.1 1.1"/>
+                      strokeDasharray="1.1 1.1"/>
                 <path d="M515.971 133.822V133.822C518.789 132.751 521.945 134.148 523.047 136.954L523.539 138.207"
-                      stroke="white" strokeWidth="0.55175" stroke-dasharray="1.1 1.1"/>
+                      stroke="white" strokeWidth="0.55175" strokeDasharray="1.1 1.1"/>
                 <rect x="514.606" y="147.857" width="14.3962" height="1.65525" rx="0.827625"
                       transform="rotate(-48.9802 514.606 147.857)" fill="#D9D9D9"/>
                 <line x1="303.292" y1="134.28" x2="317.845" y2="131.618" stroke="white" strokeWidth="0.55175"
-                      stroke-dasharray="1.1 1.1"/>
+                      strokeDasharray="1.1 1.1"/>
                 <path d="M317.649 131.765V131.765C319.224 134.336 318.436 137.696 315.883 139.299L314.743 140.015"
-                      stroke="white" strokeWidth="0.55175" stroke-dasharray="1.1 1.1"/>
+                      stroke="white" strokeWidth="0.55175" strokeDasharray="1.1 1.1"/>
                 <rect x="303.604" y="133.025" width="14.3962" height="1.65525" rx="0.827625"
                       transform="rotate(30.3389 303.604 133.025)" fill="#D9D9D9"/>
                 <line x1="528.462" y1="119.41" x2="543.12" y2="121.415" stroke="white" strokeWidth="0.55175"
-                      stroke-dasharray="1.1 1.1"/>
+                      strokeDasharray="1.1 1.1"/>
                 <path d="M542.888 121.492V121.492C543.583 124.426 541.788 127.373 538.862 128.102L537.557 128.426"
-                      stroke="white" strokeWidth="0.55175" stroke-dasharray="1.1 1.1"/>
+                      stroke="white" strokeWidth="0.55175" strokeDasharray="1.1 1.1"/>
                 <rect x="529.15" y="118.315" width="14.3962" height="1.65525" rx="0.827625"
                       transform="rotate(48.4908 529.15 118.315)" fill="#D9D9D9"/>
                 <line x1="351.292" y1="125.28" x2="365.845" y2="122.618" stroke="white" strokeWidth="0.55175"
-                      stroke-dasharray="1.1 1.1"/>
+                      strokeDasharray="1.1 1.1"/>
                 <path d="M365.649 122.765V122.765C367.224 125.336 366.436 128.696 363.883 130.299L362.743 131.015"
-                      stroke="white" strokeWidth="0.55175" stroke-dasharray="1.1 1.1"/>
+                      stroke="white" strokeWidth="0.55175" strokeDasharray="1.1 1.1"/>
                 <rect x="351.604" y="124.025" width="14.3962" height="1.65525" rx="0.827625"
                       transform="rotate(30.3389 351.604 124.025)" fill="#D9D9D9"/>
                 <line x1="582.466" y1="126.353" x2="597.108" y2="128.474" stroke="white" strokeWidth="0.55175"
-                      stroke-dasharray="1.1 1.1"/>
+                      strokeDasharray="1.1 1.1"/>
                 <path d="M596.875 128.55V128.55C597.547 131.489 595.729 134.422 592.797 135.127L591.489 135.441"
-                      stroke="white" strokeWidth="0.55175" stroke-dasharray="1.1 1.1"/>
+                      stroke="white" strokeWidth="0.55175" strokeDasharray="1.1 1.1"/>
                 <rect x="583.162" y="125.263" width="14.3962" height="1.65525" rx="0.827625"
                       transform="rotate(48.9443 583.162 125.263)" fill="#D9D9D9"/>
                 <line x1="379.103" y1="101.887" x2="379.398" y2="116.678" stroke="white" strokeWidth="0.55175"
-                      stroke-dasharray="1.1 1.1"/>
+                      strokeDasharray="1.1 1.1"/>
                 <path d="M379.286 116.462V116.462C376.495 117.604 373.305 116.288 372.132 113.511L371.608 112.272"
-                      stroke="white" strokeWidth="0.55175" stroke-dasharray="1.1 1.1"/>
+                      stroke="white" strokeWidth="0.55175" strokeDasharray="1.1 1.1"/>
                 <rect x="380.292" y="102.396" width="14.3962" height="1.65525" rx="0.827625"
                       transform="rotate(129.559 380.292 102.396)" fill="#D9D9D9"/>
                 <line x1="617.949" y1="113.958" x2="616.105" y2="128.637" stroke="white" strokeWidth="0.55175"
-                      stroke-dasharray="1.1 1.1"/>
+                      strokeDasharray="1.1 1.1"/>
                 <path d="M616.025 128.406V128.406C613.099 129.134 610.132 127.371 609.372 124.453L609.033 123.151"
-                      stroke="white" strokeWidth="0.55175" stroke-dasharray="1.1 1.1"/>
+                      stroke="white" strokeWidth="0.55175" strokeDasharray="1.1 1.1"/>
                 <rect x="619.052" y="114.633" width="14.3962" height="1.65525" rx="0.827625"
                       transform="rotate(137.862 619.052 114.633)" fill="#D9D9D9"/>
                 <line x1="382.103" y1="135.887" x2="382.398" y2="150.678" stroke="white" strokeWidth="0.55175"
-                      stroke-dasharray="1.1 1.1"/>
+                      strokeDasharray="1.1 1.1"/>
                 <path d="M382.286 150.462V150.462C379.495 151.604 376.305 150.288 375.132 147.511L374.608 146.272"
-                      stroke="white" strokeWidth="0.55175" stroke-dasharray="1.1 1.1"/>
+                      stroke="white" strokeWidth="0.55175" strokeDasharray="1.1 1.1"/>
                 <rect x="383.292" y="136.396" width="14.3962" height="1.65525" rx="0.827625"
                       transform="rotate(129.559 383.292 136.396)" fill="#D9D9D9"/>
                 <line x1="604.965" y1="148.813" x2="601.876" y2="163.281" stroke="white" strokeWidth="0.55175"
-                      stroke-dasharray="1.1 1.1"/>
+                      strokeDasharray="1.1 1.1"/>
                 <path d="M601.816 163.045V163.045C598.838 163.52 596.033 161.51 595.524 158.538L595.297 157.212"
-                      stroke="white" strokeWidth="0.55175" stroke-dasharray="1.1 1.1"/>
+                      stroke="white" strokeWidth="0.55175" strokeDasharray="1.1 1.1"/>
                 <rect x="606.006" y="149.581" width="14.3962" height="1.65525" rx="0.827625"
                       transform="rotate(142.757 606.006 149.581)" fill="#D9D9D9"/>
                 <line x1="166.348" y1="150.606" x2="164.973" y2="135.876" stroke="white" strokeWidth="0.55175"
-                      stroke-dasharray="1.1 1.1"/>
+                      strokeDasharray="1.1 1.1"/>
                 <path d="M165.101 136.083V136.083C167.801 134.74 171.078 135.82 172.452 138.504L173.064 139.702"
-                      stroke="white" strokeWidth="0.55175" stroke-dasharray="1.1 1.1"/>
+                      stroke="white" strokeWidth="0.55175" strokeDasharray="1.1 1.1"/>
                 <rect x="165.125" y="150.185" width="14.3962" height="1.65525" rx="0.827625"
                       transform="rotate(-54.6306 165.125 150.185)" fill="#D9D9D9"/>
                 <line x1="198.266" y1="202.449" x2="212.704" y2="199.223" stroke="white" strokeWidth="0.55175"
-                      stroke-dasharray="1.1 1.1"/>
+                      strokeDasharray="1.1 1.1"/>
                 <path d="M212.514 199.377V199.377C214.188 201.885 213.531 205.273 211.042 206.975L209.932 207.734"
-                      stroke="white" strokeWidth="0.55175" stroke-dasharray="1.1 1.1"/>
+                      stroke="white" strokeWidth="0.55175" strokeDasharray="1.1 1.1"/>
                 <rect x="198.529" y="201.183" width="14.3962" height="1.65525" rx="0.827625"
                       transform="rotate(28.1102 198.529 201.183)" fill="#D9D9D9"/>
                 <line x1="949.033" y1="259.53" x2="962.495" y2="265.666" stroke="white" strokeWidth="0.55175"
-                      stroke-dasharray="1.1 1.1"/>
+                      strokeDasharray="1.1 1.1"/>
                 <path d="M962.251 265.674V265.674C962.073 268.683 959.506 270.99 956.494 270.846L955.151 270.781"
-                      stroke="white" strokeWidth="0.55175" stroke-dasharray="1.1 1.1"/>
+                      stroke="white" strokeWidth="0.55175" strokeDasharray="1.1 1.1"/>
                 <rect x="950.006" y="258.679" width="14.3962" height="1.65525" rx="0.827625"
                       transform="rotate(65.2038 950.006 258.679)" fill="#D9D9D9"/>
                 <line x1="1035.13" y1="228.095" x2="1044.81" y2="242.974" stroke="white" strokeWidth="0.55175"
-                      stroke-dasharray="1.1 1.1"/>
+                      strokeDasharray="1.1 1.1"/>
                 <path d="M1044.6 242.792V242.792C1042.49 245.726 1038.4 246.408 1035.44 244.324L1034.12 243.394"
-                      stroke="white" strokeWidth="0.55175" stroke-dasharray="1.1 1.1"/>
+                      stroke="white" strokeWidth="0.55175" strokeDasharray="1.1 1.1"/>
                 <rect x="1036.7" y="227.829" width="17.2741" height="1.98615" rx="0.993074"
                       transform="rotate(97.6513 1036.7 227.829)" fill="#D9D9D9"/>
                 <line x1="1045.98" y1="247.232" x2="1053.55" y2="263.29" stroke="white" strokeWidth="0.55175"
-                      stroke-dasharray="1.1 1.1"/>
+                      strokeDasharray="1.1 1.1"/>
                 <path d="M1053.37 263.083V263.083C1050.87 265.701 1046.74 265.822 1044.09 263.354L1042.91 262.253"
-                      stroke="white" strokeWidth="0.55175" stroke-dasharray="1.1 1.1"/>
+                      stroke="white" strokeWidth="0.55175" strokeDasharray="1.1 1.1"/>
                 <rect x="1047.58" y="247.184" width="17.2741" height="1.98615" rx="0.993074"
                       transform="rotate(105.47 1047.58 247.184)" fill="#D9D9D9"/>
                 <path d="M893.5 245.5L773 216L753.5 266C804.71 288.8 835.345 297.167 893.5 304" stroke="#6A8090"

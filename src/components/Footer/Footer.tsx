@@ -41,10 +41,10 @@ const Footer: FC<FooterProps> = () => {
                             <img src={arrowHeadDown} alt=""/>
                             <div className={isDropdownActive ? styles.dropdownMenu : styles.dropdownMenuGone}>
                                 {
-                                    availableLanguages.filter((language) => language !== selectedLanguage).map((language) =>
-                                        <button className={styles.dropdownMenuItem}>
+                                    availableLanguages.filter((language) => language !== selectedLanguage).map((language, index) =>
+                                        <div key={index} className={styles.dropdownMenuItem}>
                                             <a onClick={() => handleLanguageChange(language)}>{language}</a>
-                                        </button>
+                                        </div>
                                     )
                                 }
                             </div>
