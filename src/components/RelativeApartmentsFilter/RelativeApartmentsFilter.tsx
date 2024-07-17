@@ -106,8 +106,6 @@ const RelativeApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
             return newState;
         })
         setSelectedFloorsQuantity(0)
-        setStandardSelected(false)
-        setDuplexSelected(false)
         localStorage.removeItem("lastSearchInput")
     }
 

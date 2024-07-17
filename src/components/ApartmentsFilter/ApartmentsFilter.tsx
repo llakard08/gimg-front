@@ -9,6 +9,7 @@ import "./ApartmentsFilter.css"
 import {useTranslation} from "react-i18next";
 import i18n from "../../utils/i18n";
 import {LastSearchInputs, NotSelectedSituationsData} from "../../interfaces/GeneralInterfaces";
+import apartments from "../Apartments/Apartments";
 
 interface ApartmentsFilterProps {
     setFilterVisible: Dispatch<SetStateAction<boolean>>
@@ -88,6 +89,11 @@ const ApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
                 }
                 return result;
             })
+        } else {
+            setStandardSelected((prevState) => {
+                setApartmentAreasToDisplay(standardApartmentAreas)
+                return true;
+            })
         }
     }
 
@@ -107,8 +113,6 @@ const ApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
             return newState;
         })
         setSelectedFloorsQuantity(0)
-        setStandardSelected(false)
-        setDuplexSelected(false)
         localStorage.removeItem("lastSearchInput")
     }
 
@@ -144,7 +148,6 @@ const ApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
                 result.specificSearchFlag = false;
                 result.apartments = performAllApartmentsSearch(building);
             }
-            console.log(result.apartments)
         } else if (!areasNotSelected && floorsNotSelected) {
             result.specificSearchFlag = false;
             result.apartments = performOnlySpecificAreasSearch(building)
@@ -263,7 +266,7 @@ const ApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
             setErrorMessage((prevState) => 'Apartments not found')
         } else {
             let lastSearchInput: LastSearchInputs = {
-                selectedType: standardSelected ? 'standard' : 'duplex',
+                selectedType: standardSelected ? 'standard' : duplexSelected ? 'duplex' : 'none',
                 selectedFloors: selectedFloors,
                 selectedFloorsQuantity: selectedFloorsQuantity,
                 selectedAreas: selectedAreas,
@@ -302,7 +305,11 @@ const ApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
         availableStandardApartmentAreas = availableStandardApartmentAreas.sort((a, b) => a - b);
         setStandardApartmentAreas(() => {
             const reloadLatestSearchTypeData = reloadLatestSearchType();
-            if (reloadLatestSearchTypeData && reloadLatestSearchTypeData === 'standard') {
+            if (reloadLatestSearchTypeData) {
+                if(reloadLatestSearchTypeData === 'standard') {
+                    setApartmentAreasToDisplay(availableStandardApartmentAreas);
+                }
+            } else {
                 setApartmentAreasToDisplay(availableStandardApartmentAreas);
             }
             return availableStandardApartmentAreas
@@ -312,8 +319,12 @@ const ApartmentsFilter: FC<ApartmentsFilterProps> = (props) => {
         availableDuplexApartmentAreas.sort((a, b) => a - b);
         setDuplexApartmentAreas(() => {
             const reloadLatestSearchTypeData = reloadLatestSearchType();
-            if (reloadLatestSearchTypeData && reloadLatestSearchTypeData === 'duplex') {
-                setApartmentAreasToDisplay(availableDuplexApartmentAreas);
+            if (reloadLatestSearchTypeData) {
+                if(reloadLatestSearchTypeData === 'duplex') {
+                    setApartmentAreasToDisplay(availableDuplexApartmentAreas);
+                }
+            } else {
+                setApartmentAreasToDisplay(availableStandardApartmentAreas);
             }
             return availableDuplexApartmentAreas
         })
